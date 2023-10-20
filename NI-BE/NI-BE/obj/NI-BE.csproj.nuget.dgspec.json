@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\babyNI-BE\\NI-BE\\NI-BE\\NI-BE.csproj": {}
+    "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\NI-BE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\babyNI-BE\\NI-BE\\NI-BE\\NI-BE.csproj": {
+    "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\NI-BE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\babyNI-BE\\NI-BE\\NI-BE\\NI-BE.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\NI-BE.csproj",
         "projectName": "NI-BE",
-        "projectPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\babyNI-BE\\NI-BE\\NI-BE\\NI-BE.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\NI-BE.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\babyNI-BE\\NI-BE\\NI-BE\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

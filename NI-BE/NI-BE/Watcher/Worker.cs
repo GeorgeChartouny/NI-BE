@@ -24,7 +24,7 @@ namespace babyNI_BE.Watcher
                 FileSystemWatcher watcher = new FileSystemWatcher();
 
                 // The path to monitor the files
-                watcher.Path = @"C:\Users\User\Desktop\G\Baby NI Project\Code\babyNI-BE\NI-BE\NI-BE\Data\NewData";
+                watcher.Path = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\NewData";
 
                 // Disable monitoring sub directories
                 watcher.IncludeSubdirectories = false;
@@ -52,31 +52,55 @@ namespace babyNI_BE.Watcher
         {
             if(e.ChangeType == WatcherChangeTypes.Created)
             {
-          
+        
 
 
                 string targetPath = "";
                 Console.WriteLine("path: "+ Path.GetExtension(e.FullPath.ToString()));
                 if (Path.GetExtension(e.FullPath.ToString())== ".txt")
                 {
+                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
+                 
 
                     try
                     {
                         //Reading from the file
                         List<string> lines = File.ReadAllLines(e.FullPath).ToList();
-                        Console.WriteLine("lines: " + lines);
 
-                        foreach (string line in lines)
+                        List<string>headers = null;
+                        List<string> entries = null;
+
+                        using (StreamWriter csvWriter = new StreamWriter(csvFile))
                         {
+
+                            foreach (string line in lines)
+                             {
+                            string[] lineEntries = line.Split(',');
+
+                                csvWriter.WriteLine(line);
                             Console.WriteLine(line);
+                            // specify the fields headers
+                            if (headers == null)
+                            {
+                                headers = lineEntries.ToList(); 
+                            } else
+                            {
+                                 entries  = lineEntries.ToList();
+                            }
+                            }
+
+
                         }
+
+                        Console.WriteLine("headers: ", headers);
+                        Console.WriteLine("entries: ", entries);
                     }
                     catch(Exception ex)
                     {
                         Console.WriteLine("Error: "+ ex.Message);
                     }finally
                     {
-                        targetPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\babyNI-BE\NI-BE\NI-BE\Data\OldData";
+                        targetPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\OldData";
 
                     }
 
@@ -88,10 +112,10 @@ namespace babyNI_BE.Watcher
                 targetPath = Path.Combine(targetPath, Path.GetFileName(e.FullPath.ToString()));
                 File.Copy(e.FullPath.ToString(), targetPath, true);
 
-                     if(File.Exists(targetPath))
-                    {
-                     File.Delete(e.FullPath.ToString());
-                    }
+                    // if(File.Exists(targetPath))
+                    //{
+                    // File.Delete(e.FullPath.ToString());
+                    //}
                 Console.WriteLine(e.Name + " File moved successfully to organizer folder");
                     }
                 catch (Exception ex)

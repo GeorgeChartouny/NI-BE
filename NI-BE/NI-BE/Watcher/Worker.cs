@@ -61,16 +61,16 @@ namespace babyNI_BE.Watcher
                 Console.WriteLine("path: "+ Path.GetExtension(e.FullPath.ToString()));
                 if (Path.GetExtension(e.FullPath.ToString())== ".txt")
                 {
-                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
-                 
+//                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
+                    string csvFile = Path.Combine(@"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
+
+
 
                     try
                     {
                         //Reading from the file
                         List<string> lines = File.ReadAllLines(e.FullPath).ToList();
 
-                        List<string>headers = null;
-                        List<string> entries = null;
 
                         using (StreamWriter csvWriter = new StreamWriter(csvFile))
                         {
@@ -90,35 +90,48 @@ namespace babyNI_BE.Watcher
                             //     entries  = lineEntries.ToList();
                             //}
                             //}
+
+
                             
-                            for (int i = 0; i<lines.Count; i++)
+                            //lines = lines.Where(line => !line.Split(',')[4].Contains("Unreachable Bulk FC")).ToList();
+
+                            for (int i = 0; i < lines.Count; i++)
                             {
                                 string[] lineEntries = lines[i].Split(',');
-                                Console.WriteLine("i iteration: " + lines[i]);
-                                if(fileName.Contains("RADIO_LINK_POWER"))
+
+                                if (fileName.Contains("RADIO_LINK_POWER"))
                                 {
+
+
+                                   
+
+                                    // Discarding failed records 
+                                    if (lines[i].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0)
+                                        lines.RemoveAt(i);
+
+                                    // add value to column Network_SID    
+                                   // lines[i] = i.ToString() + lines[i];
+
                                     // Remove disabled fields
-                                   // lineEntries[0] = "";
-                                   // lineEntries[8] = "";
-                                   // lineEntries[16] = "";
-                        
-
-                                    // Remove the now empty entries from the list
-                                  //  lineEntries = lineEntries.Where(x => !string.IsNullOrEmpty(x)).ToArray();
-
-                                    int[] removedColumns = {0,8,16};
+                                    int[] removedColumns = { 0, 8, 16 };
                                     lineEntries = lineEntries
-                                        .Select((x,Index) => removedColumns.Contains(Index) ? "" : x)
+                                        .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
                                         .Where(x => !string.IsNullOrWhiteSpace(x))
                                         .ToArray();
-                                    
-                                    
+
+
                                     // Reconstruct the list
                                     lines[i] = string.Join(",", lineEntries);
+
+                                    
+ 
                                 }
                                 else if (fileName.Contains("TN_RFInputPower"))
                                 {
-                                    int[] removedColumns = {8,10,11,14 };
+
+                             
+
+                                    int[] removedColumns = { 8, 10, 11, 14 };
                                     // Remove disabled fields
                                     lineEntries = lineEntries
                                         .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
@@ -127,20 +140,15 @@ namespace babyNI_BE.Watcher
 
                                     // Reconstruct the list
                                     lines[i] = string.Join(",", lineEntries);
-                                }
-                                csvWriter.WriteLine(lines[i]);
 
-                                if (lines[i].Count() == 1)
-                                {
-                                    headers.Add( lines[i]) ;
                                 }
+
+                                csvWriter.WriteLine(lines[i]);
                             }
 
 
                         }
 
-                        Console.WriteLine("headers: ", headers);
-                        Console.WriteLine("entries: ", entries);
                     }
                     catch(Exception ex)
                     {

@@ -50,6 +50,8 @@ namespace babyNI_BE.Watcher
         }
         public void OnChanged(object source, FileSystemEventArgs e)
         {
+            string fileName = Path.GetFileName(e.FullPath);
+           
             if(e.ChangeType == WatcherChangeTypes.Created)
             {
         
@@ -73,20 +75,55 @@ namespace babyNI_BE.Watcher
                         using (StreamWriter csvWriter = new StreamWriter(csvFile))
                         {
 
-                            foreach (string line in lines)
-                             {
-                            string[] lineEntries = line.Split(',');
+                            //foreach (string line in lines)
+                            // {
+                            //string[] lineEntries = line.Split(',');
 
-                                csvWriter.WriteLine(line);
-                            Console.WriteLine(line);
-                            // specify the fields headers
-                            if (headers == null)
+                            //    csvWriter.WriteLine(line);
+                            //Console.WriteLine(line);
+                            //// specify the fields headers
+                            //if (headers == null)
+                            //{
+                            //    headers = lineEntries.ToList(); 
+                            //} else
+                            //{
+                            //     entries  = lineEntries.ToList();
+                            //}
+                            //}
+                            
+                            for (int i = 0; i<lines.Count; i++)
                             {
-                                headers = lineEntries.ToList(); 
-                            } else
-                            {
-                                 entries  = lineEntries.ToList();
-                            }
+                                string[] lineEntries = lines[i].Split(',');
+                                Console.WriteLine("i iteration: " + lines[i]);
+                                if(fileName.Contains("RADIO_LINK_POWER"))
+                                {
+                                    // Remove disabled fields
+                                    lineEntries[0] = "";
+                                    lineEntries[8] = "";
+                                    lineEntries[16] = "";
+                                    //lines.RemoveAt(0);
+                                    //lines.RemoveAt(8);
+                                    //lines.RemoveAt(16);
+
+                                    // Remove the now empty entries from the list
+                                    lineEntries = lineEntries.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+                                    
+                                    // Reconstruct the list
+                                    lines[i] = string.Join(",", lineEntries);
+                                }
+                                else if (fileName.Contains("TN_RFInputPower"))
+                                {
+                                    lines.RemoveAt(8);
+                                    lines.RemoveAt(10);
+                                    lines.RemoveAt(11);
+                                    lines.RemoveAt(14);
+                                }
+                                csvWriter.WriteLine(lines[i]);
+
+                                if (lines[i].Count() == 1)
+                                {
+                                    headers.Add( lines[i]) ;
+                                }
                             }
 
 

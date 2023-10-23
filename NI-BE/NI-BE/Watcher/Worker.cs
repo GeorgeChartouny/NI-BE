@@ -103,14 +103,18 @@ namespace babyNI_BE.Watcher
                                 {
 
 
-                                   
+
 
                                     // Discarding failed records 
-                                    if (lines[i].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0)
-                                        lines.RemoveAt(i);
+                                    for (int j = lines.Count - 1; j >= 0; j--)
+                                    {
+                                        if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0)
+                                            lines.RemoveAt(j);
+                                    }
+
 
                                     // add value to column Network_SID    
-                                   // lines[i] = i.ToString() + lines[i];
+                                    // lines[i] = i.ToString() + lines[i];
 
                                     // Remove disabled fields
                                     int[] removedColumns = { 0, 8, 16 };
@@ -167,10 +171,10 @@ namespace babyNI_BE.Watcher
                 targetPath = Path.Combine(targetPath, Path.GetFileName(e.FullPath.ToString()));
                 File.Copy(e.FullPath.ToString(), targetPath, true);
 
-                    // if(File.Exists(targetPath))
-                    //{
-                    // File.Delete(e.FullPath.ToString());
-                    //}
+                    if(File.Exists(targetPath))
+                    {
+                     File.Delete(e.FullPath.ToString());
+                    }
                 Console.WriteLine(e.Name + " File moved successfully to organizer folder");
                     }
                 catch (Exception ex)

@@ -98,15 +98,20 @@ namespace babyNI_BE.Watcher
                                 if(fileName.Contains("RADIO_LINK_POWER"))
                                 {
                                     // Remove disabled fields
-                                    lineEntries[0] = "";
-                                    lineEntries[8] = "";
-                                    lineEntries[16] = "";
-                                    //lines.RemoveAt(0);
-                                    //lines.RemoveAt(8);
-                                    //lines.RemoveAt(16);
+                                   // lineEntries[0] = "";
+                                   // lineEntries[8] = "";
+                                   // lineEntries[16] = "";
+                        
 
                                     // Remove the now empty entries from the list
-                                    lineEntries = lineEntries.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+                                  //  lineEntries = lineEntries.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                                    int[] removedColumns = {0,8,16};
+                                    lineEntries = lineEntries
+                                        .Select((x,Index) => removedColumns.Contains(Index) ? "" : x)
+                                        .Where(x => !string.IsNullOrWhiteSpace(x))
+                                        .ToArray();
+                                    
                                     
                                     // Reconstruct the list
                                     lines[i] = string.Join(",", lineEntries);

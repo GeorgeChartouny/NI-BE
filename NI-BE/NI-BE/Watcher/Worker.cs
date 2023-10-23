@@ -103,7 +103,10 @@ namespace babyNI_BE.Watcher
                                 {
 
 
+                                    string faildDescField = lineEntries[lineEntries.Length - 1];
 
+                                    if (faildDescField != "-")
+                                        lineEntries[lineEntries.Length - 1] = "-";
 
                                     // Discarding failed records 
                                     for (int j = lines.Count - 1; j >= 0; j--)

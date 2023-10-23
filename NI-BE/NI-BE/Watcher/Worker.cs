@@ -118,10 +118,15 @@ namespace babyNI_BE.Watcher
                                 }
                                 else if (fileName.Contains("TN_RFInputPower"))
                                 {
-                                    lines.RemoveAt(8);
-                                    lines.RemoveAt(10);
-                                    lines.RemoveAt(11);
-                                    lines.RemoveAt(14);
+                                    int[] removedColumns = {8,10,11,14 };
+                                    // Remove disabled fields
+                                    lineEntries = lineEntries
+                                        .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
+                                        .Where(x => !string.IsNullOrWhiteSpace(x))
+                                        .ToArray();
+
+                                    // Reconstruct the list
+                                    lines[i] = string.Join(",", lineEntries);
                                 }
                                 csvWriter.WriteLine(lines[i]);
 

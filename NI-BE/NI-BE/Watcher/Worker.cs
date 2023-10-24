@@ -36,12 +36,19 @@ namespace babyNI_BE.Watcher
 
                 //Include all files in the folder
                 watcher.Filter = "*";
+                try
+                {
 
                 //Register Event Handler
                 watcher.Changed += new FileSystemEventHandler(OnChanged);
                 watcher.Created += new FileSystemEventHandler(OnChanged);
                 watcher.Deleted += new FileSystemEventHandler(OnChanged);
                 watcher.Renamed += new RenamedEventHandler(OnRenamed);
+                }
+                catch(IOException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
 
                 //Start Monitoring
                 watcher.EnableRaisingEvents = true;

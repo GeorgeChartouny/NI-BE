@@ -19,7 +19,7 @@ namespace babyNI_BE.Watcher
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at time: {time}", DateTimeOffset.Now);
-                await Task.Delay(10000,stoppingToken);
+                await Task.Delay(1000,stoppingToken);
 
                 FileSystemWatcher watcher = new FileSystemWatcher();
 
@@ -106,7 +106,8 @@ namespace babyNI_BE.Watcher
                                     string faildDescField = lineEntries[lineEntries.Length - 1];
 
                                     if (faildDescField != "-")
-                                        lineEntries[lineEntries.Length - 1] = "-";
+                                        //lineEntries[lineEntries.Length - 1] = "-";
+                                        lines.RemoveAt(i);
 
                                     // Discarding failed records 
                                     for (int j = lines.Count - 1; j >= 0; j--)

@@ -13,7 +13,7 @@ namespace babyNI_BE.Watcher
         public Worker(ILogger<Worker> logger)
         {
             _logger = logger;
-            
+
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -21,7 +21,7 @@ namespace babyNI_BE.Watcher
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at time: {time}", DateTimeOffset.Now);
-                await Task.Delay(10000,stoppingToken);
+                await Task.Delay(10000, stoppingToken);
 
                 FileSystemWatcher watcher = new FileSystemWatcher();
 
@@ -39,13 +39,13 @@ namespace babyNI_BE.Watcher
                 try
                 {
 
-                //Register Event Handler
-                watcher.Changed += new FileSystemEventHandler(OnChanged);
-                watcher.Created += new FileSystemEventHandler(OnChanged);
-                watcher.Deleted += new FileSystemEventHandler(OnChanged);
-                watcher.Renamed += new RenamedEventHandler(OnRenamed);
+                    //Register Event Handler
+                    watcher.Changed += new FileSystemEventHandler(OnChanged);
+                    watcher.Created += new FileSystemEventHandler(OnChanged);
+                    watcher.Deleted += new FileSystemEventHandler(OnChanged);
+                    watcher.Renamed += new RenamedEventHandler(OnRenamed);
                 }
-                catch(IOException ex)
+                catch (IOException ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
@@ -60,17 +60,17 @@ namespace babyNI_BE.Watcher
         public void OnChanged(object source, FileSystemEventArgs e)
         {
             string fileName = Path.GetFileName(e.FullPath);
-           
-            if(e.ChangeType == WatcherChangeTypes.Created)
+
+            if (e.ChangeType == WatcherChangeTypes.Created)
             {
-        
+
 
 
                 string targetPath = "";
-                Console.WriteLine("path: "+ Path.GetExtension(e.FullPath.ToString()));
-                if (Path.GetExtension(e.FullPath.ToString())== ".txt")
+                Console.WriteLine("path: " + Path.GetExtension(e.FullPath.ToString()));
+                if (Path.GetExtension(e.FullPath.ToString()) == ".txt")
                 {
-//                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
+                    //                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
                     string csvFile = Path.Combine(@"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
 
 
@@ -109,7 +109,7 @@ namespace babyNI_BE.Watcher
                                         using (SHA256 sha256 = SHA256.Create())
                                         {
                                             byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(concatValues));
-                                             hashed = BitConverter.ToInt32(hashedBytes, 0); 
+                                            hashed = BitConverter.ToInt32(hashedBytes, 0);
 
                                         }
                                         // extracting the date from the file name and storing it under the field DateTime_key
@@ -149,7 +149,7 @@ namespace babyNI_BE.Watcher
                                         {
                                             string faildDescField = lines[j].Split(',').Last();
 
-                                            if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0|| faildDescField != "-")
+                                            if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || faildDescField != "-")
                                                 lines.RemoveAt(j);
                                         }
 
@@ -199,10 +199,11 @@ namespace babyNI_BE.Watcher
                         }
 
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("Error: "+ ex.Message);
-                    }finally
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                    finally
                     {
                         targetPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\OldData";
 
@@ -212,19 +213,20 @@ namespace babyNI_BE.Watcher
                 }
 
                 // removing the file form the folder and adding it to the OldData folder
-                try { 
-                targetPath = Path.Combine(targetPath, Path.GetFileName(e.FullPath.ToString()));
-                File.Copy(e.FullPath.ToString(), targetPath, true);
+                try
+                {
+                    targetPath = Path.Combine(targetPath, Path.GetFileName(e.FullPath.ToString()));
+                    File.Copy(e.FullPath.ToString(), targetPath, true);
 
-                    if(File.Exists(targetPath))
+                    if (File.Exists(targetPath))
                     {
-                     File.Delete(e.FullPath.ToString());
+                        File.Delete(e.FullPath.ToString());
                     }
-                Console.WriteLine(e.Name + " File moved successfully to organizer folder");
-                    }
+                    Console.WriteLine(e.Name + " File moved successfully to organizer folder");
+                }
                 catch (Exception ex)
-                { 
-                    Console.WriteLine(ex.Message); 
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
 
@@ -235,12 +237,6 @@ namespace babyNI_BE.Watcher
         {
             Console.WriteLine(e.OldName + " is changed to " + e.Name);
         }
-
-        //public static int Combine<T1,T2>(string value1, string value2)
-        //{
-        //    string concatValues = value1 + value2;
-        //    return concatValues.GetHashCode();
-        //}
 
     }
 }

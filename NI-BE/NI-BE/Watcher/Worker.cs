@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -19,7 +21,7 @@ namespace babyNI_BE.Watcher
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at time: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000,stoppingToken);
+                await Task.Delay(10000,stoppingToken);
 
                 FileSystemWatcher watcher = new FileSystemWatcher();
 
@@ -75,82 +77,104 @@ namespace babyNI_BE.Watcher
                         using (StreamWriter csvWriter = new StreamWriter(csvFile))
                         {
 
-                            //foreach (string line in lines)
-                            // {
-                            //string[] lineEntries = line.Split(',');
-
-                            //    csvWriter.WriteLine(line);
-                            //Console.WriteLine(line);
-                            //// specify the fields headers
-                            //if (headers == null)
-                            //{
-                            //    headers = lineEntries.ToList(); 
-                            //} else
-                            //{
-                            //     entries  = lineEntries.ToList();
-                            //}
-                            //}
-
-
-                            
-                            //lines = lines.Where(line => !line.Split(',')[4].Contains("Unreachable Bulk FC")).ToList();
-
                             for (int i = 0; i < lines.Count; i++)
                             {
-                                string[] lineEntries = lines[i].Split(',');
 
-                                if (fileName.Contains("RADIO_LINK_POWER"))
+                                //Add two new fields to the list
+                                try
                                 {
 
 
-                                    string faildDescField = lineEntries[lineEntries.Length - 1];
-
-                                    if (faildDescField != "-")
-                                        //lineEntries[lineEntries.Length - 1] = "-";
-                                        lines.RemoveAt(i);
-
-                                    // Discarding failed records 
-                                    for (int j = lines.Count - 1; j >= 0; j--)
+                                    if (i == 0)
                                     {
-                                        if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0)
-                                            lines.RemoveAt(j);
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i];
+                                    }
+                                    else
+                                    {
+
+                                        string[] splitEntires = lines[i].Split(',');
+                                        string concatValues = splitEntires[6] + splitEntires[7];
+
+                                        // hashing as int the values and storing it under the field Network_SID
+                                        string hashed = concatValues.GetHashCode().ToString();
+
+                                        // extracting the date from the file name and storing it under the field DateTime_key
+                                        string fileNameWithoutExt = Path.GetFileNameWithoutExtension(e.FullPath);
+                                        string[] fileDate = fileNameWithoutExt.Split('_');
+                                        string dateExtract = fileDate[fileDate.Length - 2] + fileDate[fileDate.Length - 1];
+
+                                        DateTime date = DateTime.ParseExact(dateExtract, "yyyyMMddHHmmss", System.Globalization.CultureInfo.InvariantCulture);
+
+                                        lines[i] = hashed + "," + date.ToString("yyyy/MM/dd HH:mm:ss") + "," + lines[i];
+                                    }
+                                }
+                                catch (Exception exep)
+                                {
+
+                                    Console.WriteLine("Error adding fields: " + exep.Message);
+                                }
+                                finally
+                                {
+
+
+                                    string[] lineEntries = lines[i].Split(',');
+
+                                    if (fileName.Contains("RADIO_LINK_POWER"))
+                                    {
+
+                                        // get the last value 
+                                        string faildDescField = lineEntries[lineEntries.Length - 1];
+
+                                        if (faildDescField != "-")
+                                            //lineEntries[lineEntries.Length - 1] = "-";
+                                            lines.RemoveAt(i);
+
+                                        // Discarding failed records 
+                                        for (int j = lines.Count - 1; j >= 0; j--)
+                                        {
+                                            if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0)
+                                                lines.RemoveAt(j);
+                                        }
+
+
+                                        // Remove disabled fields
+                                        //  int[] removedColumns = { 0, 8, 16 };
+                                        int[] removedColumns = { 2, 10, 18 };
+
+                                        lineEntries = lineEntries
+                                            .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
+                                            .Where(x => !string.IsNullOrWhiteSpace(x))
+                                            .ToArray();
+
+
+                                        // Reconstruct the list
+                                        lines[i] = string.Join(",", lineEntries);
+
+
+
+
+
+
                                     }
 
-
-                                    // add value to column Network_SID    
-                                    // lines[i] = i.ToString() + lines[i];
-
-                                    // Remove disabled fields
-                                    int[] removedColumns = { 0, 8, 16 };
-                                    lineEntries = lineEntries
-                                        .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
-                                        .Where(x => !string.IsNullOrWhiteSpace(x))
-                                        .ToArray();
+                                    else if (fileName.Contains("TN_RFInputPower"))
+                                    {
 
 
-                                    // Reconstruct the list
-                                    lines[i] = string.Join(",", lineEntries);
 
-                                    
- 
-                                }
-                                else if (fileName.Contains("TN_RFInputPower"))
-                                {
+                                        int[] removedColumns = { 8, 10, 11, 14 };
+                                        // Remove disabled fields
+                                        lineEntries = lineEntries
+                                            .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
+                                            .Where(x => !string.IsNullOrWhiteSpace(x))
+                                            .ToArray();
 
-                             
+                                        // Reconstruct the list
+                                        lines[i] = string.Join(",", lineEntries);
 
-                                    int[] removedColumns = { 8, 10, 11, 14 };
-                                    // Remove disabled fields
-                                    lineEntries = lineEntries
-                                        .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
-                                        .Where(x => !string.IsNullOrWhiteSpace(x))
-                                        .ToArray();
-
-                                    // Reconstruct the list
-                                    lines[i] = string.Join(",", lineEntries);
+                                    }
 
                                 }
-
                                 csvWriter.WriteLine(lines[i]);
                             }
 
@@ -195,6 +219,11 @@ namespace babyNI_BE.Watcher
             Console.WriteLine(e.OldName + " is changed to " + e.Name);
         }
 
+        //public static int Combine<T1,T2>(string value1, string value2)
+        //{
+        //    string concatValues = value1 + value2;
+        //    return concatValues.GetHashCode();
+        //}
 
     }
 }

@@ -102,9 +102,16 @@ namespace babyNI_BE.Watcher
                                         string[] splitEntires = lines[i].Split(',');
                                         string concatValues = splitEntires[6] + splitEntires[7];
 
-                                        // hashing as int the values and storing it under the field Network_SID
-                                        string hashed = concatValues.GetHashCode().ToString();
+                                        //string hashed = concatValues.GetHashCode().ToString();
 
+                                        // hashing as int the values and storing it under the field Network_SID
+                                        int hashed = 0;
+                                        using (SHA256 sha256 = SHA256.Create())
+                                        {
+                                            byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(concatValues));
+                                             hashed = BitConverter.ToInt32(hashedBytes, 0); 
+
+                                        }
                                         // extracting the date from the file name and storing it under the field DateTime_key
                                         string fileNameWithoutExt = Path.GetFileNameWithoutExtension(e.FullPath);
                                         string[] fileDate = fileNameWithoutExt.Split('_');
@@ -112,7 +119,7 @@ namespace babyNI_BE.Watcher
 
                                         DateTime date = DateTime.ParseExact(dateExtract, "yyyyMMddHHmmss", System.Globalization.CultureInfo.InvariantCulture);
 
-                                        lines[i] = hashed + "," + date.ToString("yyyy/MM/dd HH:mm:ss") + "," + lines[i];
+                                        lines[i] = hashed.ToString() + "," + date.ToString("yyyy/MM/dd HH:mm:ss") + "," + lines[i];
                                     }
                                 }
                                 catch (Exception exep)

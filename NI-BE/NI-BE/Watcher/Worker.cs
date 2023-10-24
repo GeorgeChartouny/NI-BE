@@ -129,17 +129,20 @@ namespace babyNI_BE.Watcher
                                     if (fileName.Contains("RADIO_LINK_POWER"))
                                     {
 
-                                        // get the last value 
-                                        string faildDescField = lineEntries[lineEntries.Length - 1];
+                                        //// discard the record if failed field has value other than "-"
+                                        //string faildDescField = lineEntries[lineEntries.Length - 1];
 
-                                        if (faildDescField != "-")
-                                            //lineEntries[lineEntries.Length - 1] = "-";
-                                            lines.RemoveAt(i);
+                                        //if (faildDescField != "-")
+                                        //    //lineEntries[lineEntries.Length - 1] = "-";
+                                        //    lines.RemoveAt(i);
 
-                                        // Discarding failed records 
+                                        // Discarding failed records and 
+                                        // Discard the record if failed field has value other than "-"
                                         for (int j = lines.Count - 1; j >= 0; j--)
                                         {
-                                            if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0)
+                                            string faildDescField = lines[j].Split(',').Last();
+
+                                            if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0|| faildDescField != "-")
                                                 lines.RemoveAt(j);
                                         }
 

@@ -94,17 +94,20 @@ namespace babyNI_BE.Watcher
 
                                     if (i == 0)
                                     {
-                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i];
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i]+"Link,"+"TID,"+"FARENDTID,"+"SLOT,"+"PORT";
                                     }
                                     else
                                     {
 
                                         string[] splitEntires = lines[i].Split(',');
-                                        string concatValues = splitEntires[6] + splitEntires[7];
+
+                                        string objectValue = splitEntires[2];
+
 
                                         //string hashed = concatValues.GetHashCode().ToString();
 
                                         // hashing as int the values and storing it under the field Network_SID
+                                        string concatValues = splitEntires[6] + splitEntires[7];
                                         int hashed = 0;
                                         using (SHA256 sha256 = SHA256.Create())
                                         {
@@ -120,6 +123,12 @@ namespace babyNI_BE.Watcher
                                         DateTime date = DateTime.ParseExact(dateExtract, "yyyyMMddHHmmss", System.Globalization.CultureInfo.InvariantCulture);
 
                                         lines[i] = hashed.ToString() + "," + date.ToString("yyyy/MM/dd HH:mm:ss") + "," + lines[i];
+
+
+                                        // Extract the trailing info of the object field
+                                        string trailingInfo = objectValue.Split("_").First();
+                                        Console.WriteLine("objectValue: " + objectValue);
+                                        Console.WriteLine("trailingInfo: " + trailingInfo);
                                     }
                                 }
                                 catch (Exception exep)

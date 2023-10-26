@@ -75,7 +75,11 @@ namespace babyNI_BE.Watcher
                 {
                     //                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
                     string csvFile = Path.Combine(@"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
-
+                    string slot = "";
+                    string slot1 = "";
+                    string slot2 = "";
+                    string port = "";
+                    List<string> copyEntry = new List<string>();
 
                     try
                     {
@@ -88,7 +92,6 @@ namespace babyNI_BE.Watcher
 
                             // Discarding failed records and 
                             // Discard the record if failed field has value other than "-"
-                            Console.WriteLine("before:" + lines.Count);
 
                             for (int j = lines.Count - 1; j >= 1; j--)
                             {
@@ -190,10 +193,7 @@ namespace babyNI_BE.Watcher
                                             string trailingInfo = objectValue.Split("_").First();
                                             string[] splitTrailing = trailingInfo.Split("/");
                                             Console.WriteLine("trailingInfo: " + trailingInfo);
-                                            string slot = "";
-                                            string slot1 = "";
-                                            string slot2 = "";
-                                            string port = "";
+                                    
                                             
                                             
 
@@ -256,11 +256,27 @@ namespace babyNI_BE.Watcher
 
                                             lineEntries.Add(slot);
                                             lineEntries.Add(port);
+                                                slot = "";
+                                                port = "";
                                             }
-                                            //else if (!string.IsNullOrEmpty(slot1))
-                                            //{
-                                            //    lineEntries.Add(slot1);
-                                            //}
+                                            else if (!string.IsNullOrEmpty(slot1))
+                                            {
+                                               
+                                                
+                                                lineEntries.Add(slot1);
+                                                lineEntries.Add(port);
+
+                                                for (int z = 0; z < lineEntries.Count - 2; z++)
+                                                {
+                                                    copyEntry.Add(lineEntries[z]);
+                                                }
+                                                copyEntry.Add(slot2);
+                                                copyEntry.Add(port);
+                                                slot1 = "";
+                                                slot2 = "";
+                                                port = "";
+                                       
+                                            }
 
 
 
@@ -271,7 +287,7 @@ namespace babyNI_BE.Watcher
                                         lines[i] = string.Join(",", lineEntries);
 
 
-
+                                        
 
 
 
@@ -296,6 +312,22 @@ namespace babyNI_BE.Watcher
 
                                 }
                                 csvWriter.WriteLine(lines[i]);
+                                if (copyEntry.Count>0)
+                                {
+                                    Console.WriteLine("copyEntry fiya data: " + copyEntry.Count);
+                                    List<string> lines2 = new List<string>();
+
+                                        lines2.Add(string.Join(",", copyEntry));
+                                    //for(int j =  0; j < copyEntry.Count;j++)
+                                    //{
+
+                                    //    csvWriter.WriteLine(lines2[j]);
+                                    //}
+                                    csvWriter.WriteLine(lines2[0]);
+
+                                    copyEntry.Clear();
+                                    lines2.Clear();
+                                }
                             }
 
 

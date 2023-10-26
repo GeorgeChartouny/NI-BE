@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
@@ -48,6 +49,8 @@ namespace babyNI_BE.Watcher
                 catch (IOException ex)
                 {
                     Console.WriteLine(ex.Message);
+                    watcher.Dispose();
+                    Console.WriteLine("Disposed");
                 }
 
                 //Start Monitoring
@@ -84,6 +87,23 @@ namespace babyNI_BE.Watcher
                         using (StreamWriter csvWriter = new StreamWriter(csvFile))
                         {
 
+                            // Discarding failed records and 
+                            // Discard the record if failed field has value other than "-"
+                            Console.WriteLine("before:" + lines.Count);
+
+                            for (int j = lines.Count - 1; j >= 0; j--)
+                            {
+                                string[] faildDescFieldarray = lines[j].Split(',');
+
+
+                                string failedDescField = lines[j].Split(',').Last();
+                                //string[] failedDescField = lines[j].Split(',');
+
+
+                                if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || failedDescField != "-")
+                                    lines.RemoveAt(j);
+                            }
+
                             for (int i = 0; i < lines.Count; i++)
                             {
 
@@ -92,16 +112,20 @@ namespace babyNI_BE.Watcher
                                 {
 
 
-                                    if (i == 0)
+                                    if (i == 0 && fileName.Contains("RADIO_LINK_POWER"))
                                     {
-                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i]+"Link,"+"TID,"+"FARENDTID,"+"SLOT,"+"PORT";
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",Link";//,TID,FARENDTID,SLOT,PORT"; 
+                                    }
+                                    else if (i == 0 && fileName.Contains("TN_RFInputPower"))
+                                    {
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + "SLOT," + "PORT";
                                     }
                                     else
                                     {
 
                                         string[] splitEntires = lines[i].Split(',');
 
-                                        string objectValue = splitEntires[2];
+
 
 
                                         //string hashed = concatValues.GetHashCode().ToString();
@@ -125,10 +149,8 @@ namespace babyNI_BE.Watcher
                                         lines[i] = hashed.ToString() + "," + date.ToString("yyyy/MM/dd HH:mm:ss") + "," + lines[i];
 
 
-                                        // Extract the trailing info of the object field
-                                        string trailingInfo = objectValue.Split("_").First();
-                                        Console.WriteLine("objectValue: " + objectValue);
-                                        Console.WriteLine("trailingInfo: " + trailingInfo);
+
+
                                     }
                                 }
                                 catch (Exception exep)
@@ -140,10 +162,14 @@ namespace babyNI_BE.Watcher
                                 {
 
 
-                                    string[] lineEntries = lines[i].Split(',');
+                                    string[] lineEntriesArray = lines[i].Split(',');
+                                    List<string> lineEntries = new List<string>(lineEntriesArray);
+
 
                                     if (fileName.Contains("RADIO_LINK_POWER"))
                                     {
+
+
 
                                         //// discard the record if failed field has value other than "-"
                                         //string faildDescField = lineEntries[lineEntries.Length - 1];
@@ -152,17 +178,9 @@ namespace babyNI_BE.Watcher
                                         //    //lineEntries[lineEntries.Length - 1] = "-";
                                         //    lines.RemoveAt(i);
 
-                                        // Discarding failed records and 
-                                        // Discard the record if failed field has value other than "-"
-                                        for (int j = lines.Count - 1; j >= 0; j--)
-                                        {
-                                            string faildDescField = lines[j].Split(',').Last();
+                                  
 
-                                            if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || faildDescField != "-")
-                                                lines.RemoveAt(j);
-                                        }
-
-
+                                        Console.WriteLine("after:"+lines.Count);
                                         // Remove disabled fields
                                         //  int[] removedColumns = { 0, 8, 16 };
                                         int[] removedColumns = { 2, 10, 18 };
@@ -170,7 +188,44 @@ namespace babyNI_BE.Watcher
                                         lineEntries = lineEntries
                                             .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
                                             .Where(x => !string.IsNullOrWhiteSpace(x))
-                                            .ToArray();
+                                            .ToList();
+
+
+                                        //List<string> lineEntriesList = new List<string>(lineEntries);
+                                        // Extract the trailing info of the object field
+                                        if (i != 0)
+                                        {
+
+                                            string objectValue = lineEntries[3];
+                                            string trailingInfo = objectValue.Split("_").First();
+                                            string[] splitTrailing = trailingInfo.Split("/");
+                                            Console.WriteLine("trailingInfo: " + trailingInfo);
+                                            string slot;
+                                            string port;
+
+                                            // Case 1 where the trailing info has one spot where it is decimal
+                                            if (splitTrailing[1].Contains(".") && !splitTrailing[1].Contains("+"))
+                                            {
+                                                slot = splitTrailing[1].Split(".")[0];
+                                                port = splitTrailing[1].Split(".")[1];
+                                                string linkValue = slot + "/" + port;
+
+                                                Console.WriteLine("linkValue: " + linkValue);
+                                                lineEntries.Add(linkValue);
+
+                                                Console.WriteLine("i:" + i);
+                                                Console.WriteLine("lines.count:" + lines.Count());
+                                                //Console.WriteLine("linesEntries.length: " + lineEntries.Length);
+
+
+                                            }
+                                            // Case 2.1 where there is one trailing info and it is integer
+                                            //else if (!splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
+                                            //{
+
+                                            //}
+
+                                        }
 
 
                                         // Reconstruct the list
@@ -193,7 +248,7 @@ namespace babyNI_BE.Watcher
                                         lineEntries = lineEntries
                                             .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
                                             .Where(x => !string.IsNullOrWhiteSpace(x))
-                                            .ToArray();
+                                            .ToList();
 
                                         // Reconstruct the list
                                         lines[i] = string.Join(",", lineEntries);
@@ -207,6 +262,9 @@ namespace babyNI_BE.Watcher
 
                         }
 
+                    }catch(IndexOutOfRangeException exception)
+                    {
+                        Console.WriteLine(exception.Message);
                     }
                     catch (Exception ex)
                     {

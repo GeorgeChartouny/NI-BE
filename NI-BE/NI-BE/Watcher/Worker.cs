@@ -112,7 +112,7 @@ namespace babyNI_BE.Watcher
                                     if (i == 0 && fileName.Contains("RADIO_LINK_POWER"))
                                     {
                                         Console.WriteLine("line[0]: " + lines[0]);
-                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",Link";//,TID,FARENDTID,SLOT,PORT"; 
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",Link,TID,FARENDTID,SLOT,PORT"; 
                                     }
                                     else if (i == 0 && fileName.Contains("TN_RFInputPower"))
                                     {
@@ -237,6 +237,12 @@ namespace babyNI_BE.Watcher
                                                 string linkValue = " " + slot + "/" + port;
                                                 lineEntries.Add(linkValue);
                                             }
+
+
+                                            //TID Field
+                                            string tid = objectValue.Split("_")[2];
+                                           
+                                            lineEntries.Add(tid);
 
                                         }
 

@@ -199,7 +199,7 @@ namespace babyNI_BE.Watcher
                                             {
                                                 slot = splitTrailing[1].Split(".")[0];
                                                 port = splitTrailing[1].Split(".")[1];
-                                                string linkValue = slot + "/" + port;
+                                                string linkValue = " " + slot + "/" + port ;
 
                                                 lineEntries.Add(linkValue);
 
@@ -215,7 +215,7 @@ namespace babyNI_BE.Watcher
                                                 port = splitTrailing[2];
                                                 //string linkValue1 = slot1 + "/" + port;
                                                 //string linkValue2 = slot2 + "/" + port;
-                                                string linkValue = splitTrailing[1] + "/" + port;
+                                                string linkValue = " "+splitTrailing[1] + "/" + port;
                 
                                                 lineEntries.Add(linkValue);
 
@@ -226,7 +226,7 @@ namespace babyNI_BE.Watcher
                                                 slot2 = splitTrailing[1].Split("+")[1].Split(".")[1];
                                                 port = splitTrailing[2];
 
-                                                string linkValue = slot1 + "+" + slot2 + "/" + port;
+                                                string linkValue = " " + slot1 + "+" + slot2 + "/" + port;
                                                 lineEntries.Add(linkValue);
 
                                             // Case default where there is only one integer slot
@@ -234,7 +234,7 @@ namespace babyNI_BE.Watcher
                                             {
                                                 slot = splitTrailing[1];
                                                 port = splitTrailing[2];
-                                                string linkValue = slot + "/" + port;
+                                                string linkValue = " " + slot + "/" + port;
                                                 lineEntries.Add(linkValue);
                                             }
 

@@ -57,7 +57,6 @@ namespace babyNI_BE.Watcher
                 watcher.EnableRaisingEvents = true;
 
 
-
             }
         }
         public void OnChanged(object source, FileSystemEventArgs e)
@@ -66,8 +65,6 @@ namespace babyNI_BE.Watcher
 
             if (e.ChangeType == WatcherChangeTypes.Created)
             {
-
-
 
                 string targetPath = "";
                 Console.WriteLine("path: " + Path.GetExtension(e.FullPath.ToString()));
@@ -92,14 +89,10 @@ namespace babyNI_BE.Watcher
 
                             // Discarding failed records and 
                             // Discard the record if failed field has value other than "-"
-
                             for (int j = lines.Count - 1; j >= 1; j--)
                             {
-                                string[] faildDescFieldarray = lines[j].Split(',');
-
-
                                 string failedDescField = lines[j].Split(',').Last();
-                 
+
                                 if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || failedDescField != "-")
                                     lines.RemoveAt(j);
                             }
@@ -110,12 +103,9 @@ namespace babyNI_BE.Watcher
                                 //Add two new fields to the list
                                 try
                                 {
-
-
                                     if (i == 0 && fileName.Contains("RADIO_LINK_POWER"))
                                     {
-                                        Console.WriteLine("line[0]: " + lines[0]);
-                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",Link,TID,FARENDTID,SLOT,PORT"; 
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",Link,TID,FARENDTID,SLOT,PORT";
                                     }
                                     else if (i == 0 && fileName.Contains("TN_RFInputPower"))
                                     {
@@ -126,10 +116,6 @@ namespace babyNI_BE.Watcher
 
                                         string[] splitEntires = lines[i].Split(',');
 
-
-
-
-                                        //string hashed = concatValues.GetHashCode().ToString();
 
                                         // hashing as int the values and storing it under the field Network_SID
                                         string concatValues = splitEntires[6] + splitEntires[7];
@@ -148,10 +134,6 @@ namespace babyNI_BE.Watcher
                                         DateTime date = DateTime.ParseExact(dateExtract, "yyyyMMddHHmmss", System.Globalization.CultureInfo.InvariantCulture);
 
                                         lines[i] = hashed.ToString() + "," + date.ToString("yyyy/MM/dd HH:mm:ss") + "," + lines[i];
-
-
-
-
                                     }
                                 }
                                 catch (Exception exep)
@@ -162,7 +144,6 @@ namespace babyNI_BE.Watcher
                                 finally
                                 {
 
-
                                     string[] lineEntriesArray = lines[i].Split(',');
                                     List<string> lineEntries = new List<string>(lineEntriesArray);
 
@@ -170,10 +151,6 @@ namespace babyNI_BE.Watcher
                                     if (fileName.Contains("RADIO_LINK_POWER"))
                                     {
 
-
-                                  
-
-                                        //Console.WriteLine("after:"+lines.Count);
                                         // Remove disabled fields
                                         //  int[] removedColumns = { 0, 8, 16 };
                                         int[] removedColumns = { 2, 10, 18 };
@@ -192,22 +169,16 @@ namespace babyNI_BE.Watcher
                                             string objectValue = lineEntries[3];
                                             string trailingInfo = objectValue.Split("_").First();
                                             string[] splitTrailing = trailingInfo.Split("/");
-                                            Console.WriteLine("trailingInfo: " + trailingInfo);
-                                    
-                                            
-                                            
+
 
                                             // Case 1 where the trailing info has one spot where it is decimal
                                             if (splitTrailing[1].Contains(".") && !splitTrailing[1].Contains("+"))
                                             {
                                                 slot = splitTrailing[1].Split(".")[0];
                                                 port = splitTrailing[1].Split(".")[1];
-                                                string linkValue = " " + slot + "/" + port ;
+                                                string linkValue = " " + slot + "/" + port;
 
                                                 lineEntries.Add(linkValue);
-
-                                              
-
 
                                             }
                                             // Case 2 where there is one trailing info and it is integer
@@ -218,12 +189,13 @@ namespace babyNI_BE.Watcher
                                                 port = splitTrailing[2];
                                                 //string linkValue1 = slot1 + "/" + port;
                                                 //string linkValue2 = slot2 + "/" + port;
-                                                string linkValue = " "+splitTrailing[1] + "/" + port;
-                
+                                                string linkValue = " " + splitTrailing[1] + "/" + port;
+
                                                 lineEntries.Add(linkValue);
 
-                                            // Case 3 where there are two slots and a decimal
-                                            }else if (splitTrailing[1].Contains("+") && splitTrailing[1].Contains("."))
+                                                // Case 3 where there are two slots and a decimal
+                                            }
+                                            else if (splitTrailing[1].Contains("+") && splitTrailing[1].Contains("."))
                                             {
                                                 slot1 = splitTrailing[1].Split("+")[0].Split(".")[0];
                                                 slot2 = splitTrailing[1].Split("+")[1].Split(".")[1];
@@ -232,8 +204,9 @@ namespace babyNI_BE.Watcher
                                                 string linkValue = " " + slot1 + "+" + slot2 + "/" + port;
                                                 lineEntries.Add(linkValue);
 
-                                            // Case default where there is only one integer slot
-                                            }else if (!splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
+                                                // Case default where there is only one integer slot
+                                            }
+                                            else if (!splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
                                             {
                                                 slot = splitTrailing[1];
                                                 port = splitTrailing[2];
@@ -251,18 +224,18 @@ namespace babyNI_BE.Watcher
                                             lineEntries.Add(farendtid);
 
                                             //SLOT
-                                            if(!string.IsNullOrEmpty(slot))
+                                            if (!string.IsNullOrEmpty(slot))
                                             {
 
-                                            lineEntries.Add(slot);
-                                            lineEntries.Add(port);
+                                                lineEntries.Add(slot);
+                                                lineEntries.Add(port);
                                                 slot = "";
                                                 port = "";
                                             }
                                             else if (!string.IsNullOrEmpty(slot1))
                                             {
-                                               
-                                                
+
+
                                                 lineEntries.Add(slot1);
                                                 lineEntries.Add(port);
 
@@ -275,21 +248,12 @@ namespace babyNI_BE.Watcher
                                                 slot1 = "";
                                                 slot2 = "";
                                                 port = "";
-                                       
+
                                             }
-
-
-
                                         }
-
 
                                         // Reconstruct the list
                                         lines[i] = string.Join(",", lineEntries);
-
-
-                                        
-
-
 
                                     }
 
@@ -312,17 +276,13 @@ namespace babyNI_BE.Watcher
 
                                 }
                                 csvWriter.WriteLine(lines[i]);
-                                if (copyEntry.Count>0)
+                                if (copyEntry.Count > 0)
                                 {
                                     Console.WriteLine("copyEntry fiya data: " + copyEntry.Count);
                                     List<string> lines2 = new List<string>();
 
-                                        lines2.Add(string.Join(",", copyEntry));
-                                    //for(int j =  0; j < copyEntry.Count;j++)
-                                    //{
+                                    lines2.Add(string.Join(",", copyEntry));
 
-                                    //    csvWriter.WriteLine(lines2[j]);
-                                    //}
                                     csvWriter.WriteLine(lines2[0]);
 
                                     copyEntry.Clear();
@@ -333,7 +293,8 @@ namespace babyNI_BE.Watcher
 
                         }
 
-                    }catch(IndexOutOfRangeException exception)
+                    }
+                    catch (IndexOutOfRangeException exception)
                     {
                         Console.WriteLine(exception.Message);
                     }

@@ -207,7 +207,7 @@ namespace babyNI_BE.Watcher
 
 
                                             }
-                                            // Case 2.1 where there is one trailing info and it is integer
+                                            // Case 2 where there is one trailing info and it is integer
                                             else if (splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
                                             {
                                                 slot1 = splitTrailing[1].Split("+")[0];
@@ -219,14 +219,23 @@ namespace babyNI_BE.Watcher
                 
                                                 lineEntries.Add(linkValue);
 
-                                                // need to add a second record with linkValue2
-
-
+                                            // Case 3 where there are two slots and a decimal
                                             }else if (splitTrailing[1].Contains("+") && splitTrailing[1].Contains("."))
                                             {
                                                 slot1 = splitTrailing[1].Split("+")[0].Split(".")[0];
                                                 slot2 = splitTrailing[1].Split("+")[1].Split(".")[1];
                                                 port = splitTrailing[2];
+
+                                                string linkValue = slot1 + "+" + slot2 + "/" + port;
+                                                lineEntries.Add(linkValue);
+
+                                            // Case default where there is only one integer slot
+                                            }else if (!splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
+                                            {
+                                                slot = splitTrailing[1];
+                                                port = splitTrailing[2];
+                                                string linkValue = slot + "/" + port;
+                                                lineEntries.Add(linkValue);
                                             }
 
                                         }

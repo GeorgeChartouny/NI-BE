@@ -190,7 +190,10 @@ namespace babyNI_BE.Watcher
                                             string trailingInfo = objectValue.Split("_").First();
                                             string[] splitTrailing = trailingInfo.Split("/");
                                             Console.WriteLine("trailingInfo: " + trailingInfo);
-                                            string slot,slot1,slot2,port;
+                                            string slot = "";
+                                            string slot1 = "";
+                                            string slot2 = "";
+                                            string port = "";
                                             
                                             
 
@@ -246,6 +249,18 @@ namespace babyNI_BE.Watcher
                                             //FARENDTID
                                             string farendtid = objectValue.Split("_").Last();
                                             lineEntries.Add(farendtid);
+
+                                            //SLOT
+                                            if(!string.IsNullOrEmpty(slot))
+                                            {
+
+                                            lineEntries.Add(slot);
+                                            lineEntries.Add(port);
+                                            }
+                                            //else if (!string.IsNullOrEmpty(slot1))
+                                            //{
+                                            //    lineEntries.Add(slot1);
+                                            //}
 
 
 

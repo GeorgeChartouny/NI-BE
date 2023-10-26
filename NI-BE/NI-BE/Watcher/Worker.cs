@@ -77,7 +77,6 @@ namespace babyNI_BE.Watcher
                     string csvFile = Path.Combine(@"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
 
 
-
                     try
                     {
                         //Reading from the file
@@ -91,15 +90,13 @@ namespace babyNI_BE.Watcher
                             // Discard the record if failed field has value other than "-"
                             Console.WriteLine("before:" + lines.Count);
 
-                            for (int j = lines.Count - 1; j >= 0; j--)
+                            for (int j = lines.Count - 1; j >= 1; j--)
                             {
                                 string[] faildDescFieldarray = lines[j].Split(',');
 
 
                                 string failedDescField = lines[j].Split(',').Last();
-                                //string[] failedDescField = lines[j].Split(',');
-
-
+                 
                                 if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || failedDescField != "-")
                                     lines.RemoveAt(j);
                             }
@@ -114,6 +111,7 @@ namespace babyNI_BE.Watcher
 
                                     if (i == 0 && fileName.Contains("RADIO_LINK_POWER"))
                                     {
+                                        Console.WriteLine("line[0]: " + lines[0]);
                                         lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",Link";//,TID,FARENDTID,SLOT,PORT"; 
                                     }
                                     else if (i == 0 && fileName.Contains("TN_RFInputPower"))
@@ -170,17 +168,9 @@ namespace babyNI_BE.Watcher
                                     {
 
 
-
-                                        //// discard the record if failed field has value other than "-"
-                                        //string faildDescField = lineEntries[lineEntries.Length - 1];
-
-                                        //if (faildDescField != "-")
-                                        //    //lineEntries[lineEntries.Length - 1] = "-";
-                                        //    lines.RemoveAt(i);
-
                                   
 
-                                        Console.WriteLine("after:"+lines.Count);
+                                        //Console.WriteLine("after:"+lines.Count);
                                         // Remove disabled fields
                                         //  int[] removedColumns = { 0, 8, 16 };
                                         int[] removedColumns = { 2, 10, 18 };
@@ -200,8 +190,9 @@ namespace babyNI_BE.Watcher
                                             string trailingInfo = objectValue.Split("_").First();
                                             string[] splitTrailing = trailingInfo.Split("/");
                                             Console.WriteLine("trailingInfo: " + trailingInfo);
-                                            string slot;
-                                            string port;
+                                            string slot,slot1,slot2,port;
+                                            
+                                            
 
                                             // Case 1 where the trailing info has one spot where it is decimal
                                             if (splitTrailing[1].Contains(".") && !splitTrailing[1].Contains("+"))
@@ -220,10 +211,23 @@ namespace babyNI_BE.Watcher
 
                                             }
                                             // Case 2.1 where there is one trailing info and it is integer
-                                            //else if (!splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
-                                            //{
+                                            else if (splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
+                                            {
+                                                foreach (var item in splitTrailing)
+                                                {
+                                                    Console.WriteLine("splittrailing: " + item);
+                                                }
+                                                Console.WriteLine("splitTrailing: " + splitTrailing);
+                                                slot1 = splitTrailing[1].Split("+")[0];
+                                                slot2 = splitTrailing[1].Split('+')[1];
+                                                port = splitTrailing[2];
+                                                string linkValue1 = slot1 + "/" + port;
+                                                string linkValue2 = slot2 + "/" + port;
+                                                Console.WriteLine("linvValue1: " + linkValue1);
+                                                Console.WriteLine("linvValue2: " + linkValue2);
 
-                                            //}
+
+                                            }
 
                                         }
 

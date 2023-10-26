@@ -201,32 +201,32 @@ namespace babyNI_BE.Watcher
                                                 port = splitTrailing[1].Split(".")[1];
                                                 string linkValue = slot + "/" + port;
 
-                                                Console.WriteLine("linkValue: " + linkValue);
                                                 lineEntries.Add(linkValue);
 
-                                                Console.WriteLine("i:" + i);
-                                                Console.WriteLine("lines.count:" + lines.Count());
-                                                //Console.WriteLine("linesEntries.length: " + lineEntries.Length);
+                                              
 
 
                                             }
                                             // Case 2.1 where there is one trailing info and it is integer
                                             else if (splitTrailing[1].Contains("+") && !splitTrailing[1].Contains("."))
                                             {
-                                                foreach (var item in splitTrailing)
-                                                {
-                                                    Console.WriteLine("splittrailing: " + item);
-                                                }
-                                                Console.WriteLine("splitTrailing: " + splitTrailing);
                                                 slot1 = splitTrailing[1].Split("+")[0];
                                                 slot2 = splitTrailing[1].Split('+')[1];
                                                 port = splitTrailing[2];
-                                                string linkValue1 = slot1 + "/" + port;
-                                                string linkValue2 = slot2 + "/" + port;
-                                                Console.WriteLine("linvValue1: " + linkValue1);
-                                                Console.WriteLine("linvValue2: " + linkValue2);
+                                                //string linkValue1 = slot1 + "/" + port;
+                                                //string linkValue2 = slot2 + "/" + port;
+                                                string linkValue = splitTrailing[1] + "/" + port;
+                
+                                                lineEntries.Add(linkValue);
+
+                                                // need to add a second record with linkValue2
 
 
+                                            }else if (splitTrailing[1].Contains("+") && splitTrailing[1].Contains("."))
+                                            {
+                                                slot1 = splitTrailing[1].Split("+")[0].Split(".")[0];
+                                                slot2 = splitTrailing[1].Split("+")[1].Split(".")[1];
+                                                port = splitTrailing[2];
                                             }
 
                                         }

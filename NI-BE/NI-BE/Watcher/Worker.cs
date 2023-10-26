@@ -241,8 +241,13 @@ namespace babyNI_BE.Watcher
 
                                             //TID Field
                                             string tid = objectValue.Split("_")[2];
-                                           
                                             lineEntries.Add(tid);
+
+                                            //FARENDTID
+                                            string farendtid = objectValue.Split("_").Last();
+                                            lineEntries.Add(farendtid);
+
+
 
                                         }
 

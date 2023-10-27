@@ -12,9 +12,9 @@ namespace NI_BE.DataDb
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<SOEM1_TN>();
+            modelBuilder.Entity<TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER>();
         }
 
-        public DbSet<SOEM1_TN> SOEM1_TNs { get; set; }
+        public DbSet<TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER> TRANS_MW_ERC_PM_TN_RADIO_LINK_POWERs { get; set; }
     }
 }

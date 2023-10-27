@@ -175,7 +175,6 @@ namespace babyNI_BE.Watcher
                                             .ToList();
 
 
-                                        //List<string> lineEntriesList = new List<string>(lineEntries);
                                         // Extract the trailing info of the object field
                                         if (i != 0)
                                         {
@@ -201,8 +200,7 @@ namespace babyNI_BE.Watcher
                                                 slot1 = splitTrailing[1].Split("+")[0];
                                                 slot2 = splitTrailing[1].Split('+')[1];
                                                 port = splitTrailing[2];
-                                                //string linkValue1 = slot1 + "/" + port;
-                                                //string linkValue2 = slot2 + "/" + port;
+                           
                                                 string linkValue = " " + splitTrailing[1] + "/" + port;
 
                                                 lineEntries.Add(linkValue);
@@ -286,16 +284,18 @@ namespace babyNI_BE.Watcher
                                             .ToList();
 
 
-                                        if(i != 0 && lineEntries[4].Contains("."))
+                                        if (i != 0 && lineEntries[4].Contains("."))
                                         {
+                                            //extracting the slots and ports
                                             string objectValue = lineEntries[4];
                                             string first = objectValue.Split('/')[0];
                                             string slotInt = objectValue.Split("/")[1].Split(".")[0];
                                             string portInt = objectValue.Split("/")[1].Split(".")[1];
-                                            string slotValue = first + "/" + slotInt + "+";                                            
+                                            string slotValue = first + "/" + slotInt + "+";
+
                                             lineEntries.Add(slotValue);
                                             lineEntries.Add(portInt);
-                                    
+
                                         }
 
                                         // Reconstruct the list
@@ -305,6 +305,8 @@ namespace babyNI_BE.Watcher
 
                                 }
                                 csvWriter.WriteLine(lines[i]);
+
+                                // Adding a duplicate record with a second slot 
                                 if (copyEntry.Count > 0)
                                 {
                                     List<string> lines2 = new List<string>();

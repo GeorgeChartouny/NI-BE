@@ -71,7 +71,7 @@ namespace babyNI_BE.Watcher
                 Console.WriteLine("path: " + Path.GetExtension(e.FullPath.ToString()));
                 if (Path.GetExtension(e.FullPath.ToString()) == ".txt")
                 {
-                    //                    string csvFile = Path.ChangeExtension(e.FullPath,"csv");
+                    //  string csvFile = Path.ChangeExtension(e.FullPath,"csv");
                     string csvFile = Path.Combine(@"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
                     string slot = "";
                     string slot1 = "";

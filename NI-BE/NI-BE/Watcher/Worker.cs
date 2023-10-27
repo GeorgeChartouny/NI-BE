@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -89,12 +90,25 @@ namespace babyNI_BE.Watcher
 
                             // Discarding failed records and 
                             // Discard the record if failed field has value other than "-"
-                            for (int j = lines.Count - 1; j >= 1; j--)
+                            if (fileName.Contains("RADIO_LINK_POWER"))
                             {
-                                string failedDescField = lines[j].Split(',').Last();
 
-                                if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || failedDescField != "-")
-                                    lines.RemoveAt(j);
+                                for (int j = lines.Count - 1; j >= 1; j--)
+                                {
+                                    string failedDescField = lines[j].Split(',').Last();
+
+                                    if (lines[j].Trim().IndexOf("Unreachable Bulk FC", StringComparison.OrdinalIgnoreCase) >= 0 || failedDescField != "-")
+                                        lines.RemoveAt(j);
+                                }
+                            }
+                            //Discard records with values "---"
+                            else if (fileName.Contains("TN_RFInputPower"))
+                            {
+                                for (int j = lines.Count - 1; j >= 1; j--)
+                                {
+                                    if (lines[j].Trim().IndexOf("---", StringComparison.OrdinalIgnoreCase) >= 0)
+                                        lines.RemoveAt(j);
+                                }
                             }
 
                             for (int i = 0; i < lines.Count; i++)
@@ -109,7 +123,7 @@ namespace babyNI_BE.Watcher
                                     }
                                     else if (i == 0 && fileName.Contains("TN_RFInputPower"))
                                     {
-                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + "SLOT," + "PORT";
+                                        lines[i] = "Network_SID," + "DateTime_Key," + lines[i] + ",SLOT," + "PORT";
                                     }
                                     else
                                     {
@@ -262,12 +276,27 @@ namespace babyNI_BE.Watcher
 
 
 
-                                        int[] removedColumns = { 8, 10, 11, 14 };
+                                        //int[] removedColumns = { 8, 10, 11, 14 };
+                                        int[] removedColumns = { 10, 12, 13, 16 };
+
                                         // Remove disabled fields
                                         lineEntries = lineEntries
                                             .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
                                             .Where(x => !string.IsNullOrWhiteSpace(x))
                                             .ToList();
+
+
+                                        if(i != 0 && lineEntries[4].Contains("."))
+                                        {
+                                            string objectValue = lineEntries[4];
+                                            string first = objectValue.Split('/')[0];
+                                            string slotInt = objectValue.Split("/")[1].Split(".")[0];
+                                            string portInt = objectValue.Split("/")[1].Split(".")[1];
+                                            string slotValue = first + "/" + slotInt + "+";                                            
+                                            lineEntries.Add(slotValue);
+                                            lineEntries.Add(portInt);
+                                    
+                                        }
 
                                         // Reconstruct the list
                                         lines[i] = string.Join(",", lineEntries);
@@ -278,7 +307,6 @@ namespace babyNI_BE.Watcher
                                 csvWriter.WriteLine(lines[i]);
                                 if (copyEntry.Count > 0)
                                 {
-                                    Console.WriteLine("copyEntry fiya data: " + copyEntry.Count);
                                     List<string> lines2 = new List<string>();
 
                                     lines2.Add(string.Join(",", copyEntry));

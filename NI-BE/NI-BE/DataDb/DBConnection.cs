@@ -34,32 +34,49 @@ namespace NI_BE.DataDb
                         //Create command
                         VerticaCommand command = _conn.CreateCommand();
                         command.CommandText = "select * from fact_TransactionsWeekly;";
-                        command.CommandText += "create table if not exists TESTDOTNET(id INT PRIMARY KEY,Gender VARCHAR(255))SEGMENTED BY HASH(ID) ALL NODES";
                        // Command for tables to create if they do not exist in the database
-                        command.CommandText += "CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (" +
-                            "NETWORK_SID INT NOT NULL," +
-                            "DATETIME_KEY TIMESTAMPTZ NOT NULL," +
-                            "NEID FLOAT NOT NULL," +
-                            "OBJECT TEXT NOT NULL," +
-                            "TIME TIMESTAMPTZ NOT NULL," +
-                            "INTERVAL INT NOT NULL," +
-                            "DIRECTION TEXT NOT NULL," +
-                            "NEALIAS TEXT NOT NULL," +
-                            "NETYPE TEXT NOT NULL," +
-                            "RXLEVELBELOWTS1 FLOAT NOT NULL," +
-                            "RXLEVELBELOWTS2 FLOAT NOT NULL," +
-                            "MINRXLEVEL FLOAT NOT NULL," +
-                            "MAXRXLEVEL FLOAT NOT NULL," +
-                            "TXLEVELABOVETS1 FLOAT NOT NULL," +
-                            "MINTXLEVEL FLOAT NOT NULL," +
-                            "MAXTXLEVEL FLOAT NOT NULL," +
-                            "FAILUREDESCRIPTION TEXT NOT NULL," +
-                            "LINK TEXT NOT NULL," +
-                            "TID TEXT NOT NULL," +
-                            "FARENDTID TEXT NOT NULL," +
-                            "SLOT TEXT NOT NULL," +
-                            "PORT INT NOT NULL," +
-                            ")SEGMENTED BY HASH(NETWORK_SID,DATETIME_KEY) ALL NODES;";
+                        command.CommandText += @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (
+                            NETWORK_SID INT NOT NULL,
+                            DATETIME_KEY DATETIME NOT NULL,
+                            NEID FLOAT NOT NULL,
+                            OBJECT VARCHAR(255) NOT NULL,
+                            TIME DATETIME NOT NULL,
+                            ""INTERVAL"" INT NOT NULL,
+                            DIRECTION VARCHAR(255) NOT NULL,
+                            NEALIAS VARCHAR(255) NOT NULL,
+                            NETYPE VARCHAR(255) NOT NULL,
+                            RXLEVELBELOWTS1 FLOAT NOT NULL,
+                            RXLEVELBELOWTS2 FLOAT NOT NULL,
+                            MINRXLEVEL FLOAT NOT NULL,
+                            MAXRXLEVEL FLOAT NOT NULL,
+                            TXLEVELABOVETS1 FLOAT NOT NULL,
+                            MINTXLEVEL FLOAT NOT NULL,
+                            MAXTXLEVEL FLOAT NOT NULL,
+                            FAILUREDESCRIPTION VARCHAR(255) NOT NULL,
+                            LINK VARCHAR(255) NOT NULL,
+                            TID VARCHAR(255) NOT NULL,
+                            FARENDTID VARCHAR(255) NOT NULL,
+                            SLOT VARCHAR(255) NOT NULL,
+                            PORT INT NOT NULL
+                            )SEGMENTED BY HASH(NETWORK_SID,DATETIME_KEY) ALL NODES;";
+
+                        command.CommandText += @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_WAN_RFINPUTPOWER (
+                            NETWORK_SID INT NOT NULL,
+                            DATETIME_KEY DATETIME NOT NULL,
+                            NODENAME VARCHAR(255) NOT NULL,
+                            NEID FLOAT NOT NULL,
+                            OBJECT VARCHAR(255) NOT NULL,
+                            TIME DATETIME NOT NULL,
+                            ""INTERVAL"" INT NOT NULL,
+                            DIRECTION VARCHAR(255) NOT NULL,
+                            NEALIAS VARCHAR(255) NOT NULL,
+                            NETYPE VARCHAR(255) NOT NULL,
+                            RFINPUTPOWER FLOAT NOT NULL,
+                            TID VARCHAR(255) NOT NULL,
+                            FARENDTID VARCHAR(255) NOT NULL,
+                            SLOT VARCHAR(255) NOT NULL,
+                            PORT INT NOT NULL
+                            ) SEGMENTED BY HASH(NETWORK_SID, DATETIME_KEY) ALL NODES;";
 
                         //Associate the command with the connection
                         command.Connection = _conn;
@@ -91,7 +108,7 @@ namespace NI_BE.DataDb
                 catch (Exception e)
                 {
 
-                    Console.WriteLine("Error esablishing connection: " + e.Message);
+                    Console.WriteLine("Failed to execute query: " + e.Message);
                 }
 
             }

@@ -194,6 +194,7 @@ namespace NI_BE.DataDb
 
 
                     }
+                    Console.WriteLine("Query Executed Successfully.");
                     CloseConnection(_conn);
 
                 }

@@ -336,9 +336,8 @@ namespace babyNI_BE.Watcher
                     finally
                     {
                         targetPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\OldData";
-                        string parsedPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData";
                         LoadData loadData = new LoadData();
-                        loadData.ExecuteLoader(parsedPath,fileName);
+                        loadData.ExecuteLoader( csvFile);
 
                     }
 

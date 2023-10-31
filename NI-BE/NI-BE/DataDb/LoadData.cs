@@ -25,21 +25,21 @@
                 string fileName = FileLoc.Split("\\").Last();
                 if (fileName.Contains("RADIO_LINK_POWER"))
                 {
-                    table = $"TRANS_MW_ERC_PM_TN_{fileName}";
+                    table = "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER";
                 }
                 else if (fileName.Contains("TN_RFInputPower"))
                 {
-                    table = $"TRANS_MW_ERC_PM_WAN_{fileName}";
+                    table = "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER";
                 }
 
                 try
                 {
 
                     string CopyCommand = $@"COPY {table}
-                FROM {FileLoc}
+                FROM LOCAL '{FileLoc}'
                 DELIMITER ',' SKIP 1
-                REJECTED DATA 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\rejected_{fileName}.csv'
-                EXCEPTIONS 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\exceptions_{fileName}.csv' ;";
+                REJECTED DATA 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\rejected_{fileName}'
+                EXCEPTIONS 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\exceptions_{fileName}' ;";
                     dBConnection.ConnectAndExecuteQuery(CopyCommand);
                     
                 }

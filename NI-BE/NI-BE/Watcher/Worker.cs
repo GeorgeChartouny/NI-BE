@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+using NI_BE.DataDb;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace babyNI_BE.Watcher
@@ -335,6 +336,9 @@ namespace babyNI_BE.Watcher
                     finally
                     {
                         targetPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\OldData";
+                        string parsedPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData";
+                        LoadData loadData = new LoadData();
+                        loadData.ExecuteLoader(parsedPath,fileName);
 
                     }
 

@@ -12,18 +12,17 @@ namespace NI_BE.DataDb
         public void EstablishConnection()
         {
             VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
-            //builder.Host = "10.10.4.231";
-            builder.Host = Environment.GetEnvironmentVariable("HOST");
-            builder.Port = 5433;
-            builder.Database = Environment.GetEnvironmentVariable("DATABASE");
-            builder.User = Environment.GetEnvironmentVariable("USERNAME");
-            builder.Password = Environment.GetEnvironmentVariable("PASSWORD");
+            //builder.Host = Environment.GetEnvironmentVariable("HOST");
+            //builder.Port = 5433;
+            //builder.Database = Environment.GetEnvironmentVariable("DATABASE");
+            //builder.User = Environment.GetEnvironmentVariable("USERNAME");
+            //builder.Password = Environment.GetEnvironmentVariable("PASSWORD");
+            SetConnectionConfiguration(builder);
 
             VerticaConnection _conn = new VerticaConnection(builder.ToString());
             try
             {
-                _conn.Open();
-                Console.WriteLine("Connection Established.");
+                OpenConnection(_conn);
 
                 try
                 {
@@ -33,9 +32,9 @@ namespace NI_BE.DataDb
 
                         //Create command
                         VerticaCommand command = _conn.CreateCommand();
-                        command.CommandText = "select * from fact_TransactionsWeekly;";
-                       // Command for tables to create if they do not exist in the database
-                        command.CommandText += @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (
+                        //command.CommandText = "select * from fact_TransactionsWeekly;";
+                        // Command for tables to create if they do not exist in the database
+                        string CreateRadioTable = @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (
                             NETWORK_SID INT NOT NULL,
                             DATETIME_KEY DATETIME NOT NULL,
                             NEID FLOAT NOT NULL,
@@ -60,7 +59,7 @@ namespace NI_BE.DataDb
                             PORT INT NOT NULL
                             )SEGMENTED BY HASH(NETWORK_SID,DATETIME_KEY) ALL NODES;";
 
-                        command.CommandText += @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_WAN_RFINPUTPOWER (
+                        string CreateRFInputTable = @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_WAN_RFINPUTPOWER (
                             NETWORK_SID INT NOT NULL,
                             DATETIME_KEY DATETIME NOT NULL,
                             NODENAME VARCHAR(255) NOT NULL,
@@ -78,6 +77,13 @@ namespace NI_BE.DataDb
                             PORT INT NOT NULL
                             ) SEGMENTED BY HASH(NETWORK_SID, DATETIME_KEY) ALL NODES;";
 
+
+                        AddQuery(command, CreateRadioTable);
+                        AddQuery(command, CreateRFInputTable);
+                        //command.CommandText += 
+
+                        //command.CommandText += 
+
                         //Associate the command with the connection
                         command.Connection = _conn;
 
@@ -90,19 +96,19 @@ namespace NI_BE.DataDb
                         adapter.Fill(table);
 
                         // Display each row and column value
-                        int i = 1;
-                        foreach (DataRow row in table.Rows)
-                        {
-                            foreach (DataColumn column in table.Columns)
-                            {
-                                Console.WriteLine(row[column] + "\t");
-                            }
-                            Console.WriteLine();
-                            i++;
-                        }
-                        Console.WriteLine(i + "rows returned.");
+                        //int i = 1;
+                        //foreach (DataRow row in table.Rows)
+                        //{
+                        //    foreach (DataColumn column in table.Columns)
+                        //    {
+                        //        Console.WriteLine(row[column] + "\t");
+                        //    }
+                        //    Console.WriteLine();
+                        //    i++;
+                        //}
+                        //Console.WriteLine(i + "rows returned.");
                     }
-                    _conn.Close();
+                    CloseConnection(_conn);
 
                 }
                 catch (Exception e)
@@ -120,5 +126,87 @@ namespace NI_BE.DataDb
 
         }
 
+        public void SetConnectionConfiguration(VerticaConnectionStringBuilder builder)
+        {
+
+            builder.Host = Environment.GetEnvironmentVariable("HOST");
+            builder.Port = 5433;
+            builder.Database = Environment.GetEnvironmentVariable("DATABASE");
+            builder.User = Environment.GetEnvironmentVariable("USERNAME");
+            builder.Password = Environment.GetEnvironmentVariable("PASSWORD");
+        }
+
+        public void OpenConnection(VerticaConnection conn)
+        {
+            try
+            {
+
+                conn.Open();
+                Console.WriteLine("Connection Established.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot connect: " + ex.Message);
+            }
+        }
+
+        public void CloseConnection(VerticaConnection conn)
+        {
+            try
+            {
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Cannot close the connection: " + ex.Message);
+            }
+
+        }
+
+        public void AddQuery(VerticaCommand command, string query)
+        {
+            command.CommandText += query;
+        }
+
+        public void ConnectAndExecuteQuery(string query)
+        {
+            VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
+            SetConnectionConfiguration(builder);
+            VerticaConnection _conn = new VerticaConnection(builder.ToString());
+            try
+            {
+                OpenConnection(_conn);
+
+                try
+                {
+                    using (_conn)
+                    {
+                        VerticaCommand command = _conn.CreateCommand();
+                        AddQuery(command, query);
+                        command.Connection = _conn;
+
+                        VerticaDataAdapter adapter = new VerticaDataAdapter();
+                        adapter.SelectCommand = command;
+
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+
+
+                    }
+                    CloseConnection(_conn);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to execute query: " + ex.Message);
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("Failed to connect to the database: " + e.Message); ;
+            }
+        }
     }
 }

@@ -12,11 +12,7 @@ namespace NI_BE.DataDb
         public void EstablishConnection()
         {
             VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
-            //builder.Host = Environment.GetEnvironmentVariable("HOST");
-            //builder.Port = 5433;
-            //builder.Database = Environment.GetEnvironmentVariable("DATABASE");
-            //builder.User = Environment.GetEnvironmentVariable("USERNAME");
-            //builder.Password = Environment.GetEnvironmentVariable("PASSWORD");
+ 
             SetConnectionConfiguration(builder);
 
             VerticaConnection _conn = new VerticaConnection(builder.ToString());
@@ -32,7 +28,7 @@ namespace NI_BE.DataDb
 
                         //Create command
                         VerticaCommand command = _conn.CreateCommand();
-                        //command.CommandText = "select * from fact_TransactionsWeekly;";
+  
                         // Command for tables to create if they do not exist in the database
                         string CreateRadioTable = @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (
                             NETWORK_SID INT NOT NULL,
@@ -80,9 +76,6 @@ namespace NI_BE.DataDb
 
                         AddQuery(command, CreateRadioTable);
                         AddQuery(command, CreateRFInputTable);
-                        //command.CommandText += 
-
-                        //command.CommandText += 
 
                         //Associate the command with the connection
                         command.Connection = _conn;

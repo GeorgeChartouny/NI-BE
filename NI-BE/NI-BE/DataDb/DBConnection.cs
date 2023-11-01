@@ -162,7 +162,7 @@ namespace NI_BE.DataDb
             command.CommandText += query;
         }
 
-        public void ConnectAndExecuteQuery(string query)
+        public bool ConnectAndExecuteQuery(string query)
         {
             VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
             SetConnectionConfiguration(builder);
@@ -189,17 +189,22 @@ namespace NI_BE.DataDb
                     }
                     Console.WriteLine("Query Executed Successfully.");
                     CloseConnection(_conn);
+                    return true;
 
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Failed to execute query: " + ex.Message);
+                    return false;
+
                 }
             }
             catch (Exception e)
             {
 
-                Console.WriteLine("Failed to connect to the database: " + e.Message); ;
+                Console.WriteLine("Failed to connect to the database: " + e.Message);
+                return false;
+
             }
         }
     }

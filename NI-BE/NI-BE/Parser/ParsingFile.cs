@@ -30,12 +30,11 @@ namespace NI_BE.Parser
                     string port = "";
                     List<string> copyEntry = new List<string>();
 
+                    // on process taken, sleep then retry
                     int tries = 10;
                     int delayTime = 5000;
                     for (int y = 0; y < tries; y++)
                     {
-
-
                         try
                         {
                             //Reading from the file

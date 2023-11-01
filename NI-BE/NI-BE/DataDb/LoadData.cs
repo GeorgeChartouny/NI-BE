@@ -13,7 +13,6 @@
             _fileLocation = FileLocation;
             _fileName = FileName;
         }
-        //csvFile	"C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData\\SOEM1_TN_RADIO_LINK_POWER_20200312_001500.csv"	string
 
         public void ExecuteLoader(string FileLoc)
         {
@@ -23,6 +22,7 @@
             {
                 string table = "";
                 string fileName = FileLoc.Split("\\").Last();
+                string moveLocation = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\LoadedParsedData";
                 if (fileName.Contains("RADIO_LINK_POWER"))
                 {
                     table = "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER";
@@ -34,19 +34,33 @@
 
                 try
                 {
-
+                    // sql copy command based on the file passed in the parameter
                     string CopyCommand = $@"COPY {table}
                 FROM LOCAL '{FileLoc}'
                 DELIMITER ',' SKIP 1
                 REJECTED DATA 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\rejected_{fileName}'
                 EXCEPTIONS 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\exceptions_{fileName}' ;";
-                    dBConnection.ConnectAndExecuteQuery(CopyCommand);
-                    
+                    bool success = dBConnection.ConnectAndExecuteQuery(CopyCommand);
+                    if (success)
+                    {
+                        string newFileName = fileName + "_Loaded.csv";
+                        moveLocation = Path.Combine(moveLocation, newFileName);
+                        if (!File.Exists(moveLocation))
+                        {
+
+                            File.Move(FileLoc, moveLocation);
+                            Console.WriteLine("File loaded successfully and moved to loaded folder.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("File not loaded and not moved to loaded folder");
+                    }
                 }
                 catch (Exception e)
                 {
 
-                    Console.WriteLine("Failed to load data to the database: " + e.Message);
+                    Console.WriteLine("Error in Loading process: " + e.Message);
                 }
 
 

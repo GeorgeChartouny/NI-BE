@@ -4,11 +4,9 @@ using NI_BE.DataDb;
 
 namespace NI_BE.Aggregation
 {
-    public class Hourly
+    public class HourlyAggregation
     {
-        public string _fileLocation { get; set; }
-        public string _fileName { get; set; }
-        public Hourly()
+        public HourlyAggregation()
         {
 
         }
@@ -21,16 +19,17 @@ namespace NI_BE.Aggregation
             try
             {
                 string createTableCommand = @"CREATE TABLE IF NOT EXISTS TRANS_MW_AGG_SLOT_HOURLY(
-                    DATETIME_KEY datetime,
-                    TIME_Stamp datetime,
-                    NE VARCHAR(20),
-                    RSL_INPUT_POWER FLOAT,
-                    MAX_RX_LEVEL FLOAT,
-                    RSL_DEVIATION FLOAT
-                    ) SEGMENTED BY HASH( TIME_Stamp ) ALL NODES;";
+                DATETIME_KEY datetime,
+                TIME_Stamp datetime,
+                NE_TYPE VARCHAR(50),
+                NE_ALIAS VARCHAR(50),
+                RSL_INPUT_POWER FLOAT,
+                MAX_RX_LEVEL FLOAT,
+                RSL_DEVIATION FLOAT
+                ) SEGMENTED BY HASH( TIME_Stamp ) ALL NODES;";
 
-                bool success = dBConnection.ConnectAndExecuteQuery(createTableCommand);
-                if (success)
+                bool createSuccess = dBConnection.ConnectAndExecuteQuery(createTableCommand);
+                if (createSuccess)
                 {
                     Console.WriteLine("Hourly table created.");
                     string aggregateCommand = @"
@@ -52,8 +51,8 @@ namespace NI_BE.Aggregation
                     INNER JOIN TRANS_MW_ERC_PM_WAN_RFINPUTPOWER AS RFINPUT ON RFINPUT.NETYPE = RADIO.NETYPE
                     GROUP BY 1,2,4;
                         ";
-                    bool success2 = dBConnection.ConnectAndExecuteQuery(aggregateCommand);
-                    if (success2)
+                    bool aggregateSuccess = dBConnection.ConnectAndExecuteQuery(aggregateCommand);
+                    if (aggregateSuccess)
                     {
                         Console.WriteLine("Data inserted into hourly table successfully.");
                     }

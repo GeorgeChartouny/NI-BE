@@ -1,4 +1,6 @@
-﻿namespace NI_BE.DataDb
+﻿using NI_BE.Aggregation;
+
+namespace NI_BE.DataDb
 {
     public class LoadData
     {
@@ -43,6 +45,7 @@
                     bool success = dBConnection.ConnectAndExecuteQuery(CopyCommand);
                     if (success)
                     {
+                        // move the parsed file to LoadedData folder
                         string newFileName = fileName + "_Loaded.csv";
                         moveLocation = Path.Combine(moveLocation, newFileName);
                         if (!File.Exists(moveLocation))
@@ -50,6 +53,14 @@
 
                             File.Move(FileLoc, moveLocation);
                             Console.WriteLine("File loaded successfully and moved to loaded folder.");
+                            var aggregateHourly = new HourlyAggregation();
+                           bool hourlySuccess = aggregateHourly.CreateHourlyTable();
+
+                            if (hourlySuccess)
+                            {
+                                var aggregateDaily = new DailyAggregation();
+                                aggregateDaily.createTableDaily();
+                            }
                         }
                     }
                     else

@@ -9,7 +9,7 @@ namespace NI_BE.Aggregation
             
         }
 
-        public bool createTableDaily()
+        public bool CreateAndInsertDailyTable()
         {
             DBConnection dBConnection = new DBConnection();
 

@@ -54,12 +54,12 @@ namespace NI_BE.DataDb
                             File.Move(FileLoc, moveLocation);
                             Console.WriteLine("File loaded successfully and moved to loaded folder.");
                             var aggregateHourly = new HourlyAggregation();
-                           bool hourlySuccess = aggregateHourly.CreateHourlyTable();
+                           bool hourlySuccess = aggregateHourly.CreateAndInsertHourlyTable();
 
                             if (hourlySuccess)
                             {
                                 var aggregateDaily = new DailyAggregation();
-                                aggregateDaily.createTableDaily();
+                                aggregateDaily.CreateAndInsertDailyTable();
                             }
                         }
                     }

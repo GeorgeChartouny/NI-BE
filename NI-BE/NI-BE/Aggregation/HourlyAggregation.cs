@@ -12,7 +12,7 @@ namespace NI_BE.Aggregation
         }
 
 
-        public bool CreateHourlyTable()
+        public bool CreateAndInsertHourlyTable()
         {
             DBConnection dBConnection = new DBConnection();
 

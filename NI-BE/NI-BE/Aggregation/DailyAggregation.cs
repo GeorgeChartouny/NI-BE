@@ -31,7 +31,8 @@ namespace NI_BE.Aggregation
                     string aggregateCommand = @"
                     INSERT INTO TRANS_MW_AGG_SLOT_DAILY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT DATETIME_KEY, DATE_TRUNC('DAY',TIME_STAMP), 
-                     NE_TYPE,NULL,
+                     NE_TYPE,
+                     ""-"",
                     MAX(RSL_INPUT_POWER)AS RSL_INPUT_POWER,
                     MAX(MAX_RX_LEVEL) AS MAX_RS_LEVEL,
                     (ABS(MAX(RSL_INPUT_POWER)))-(ABS(MAX(MAX_RX_LEVEL))) AS RSL_DEVIATION
@@ -41,7 +42,7 @@ namespace NI_BE.Aggregation
 
                     INSERT INTO TRANS_MW_AGG_SLOT_DAILY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT DATETIME_KEY, DATE_TRUNC('DAY',TIME_STAMP), 
-                     NULL,
+                     ""-"",
                      NE_ALIAS,
                     MAX(RSL_INPUT_POWER)AS RSL_INPUT_POWER,
                     MAX(MAX_RX_LEVEL) AS MAX_RS_LEVEL,

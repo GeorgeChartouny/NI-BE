@@ -26,7 +26,7 @@ namespace babyNI_BE.Watcher
             FileSystemWatcher watcher = new FileSystemWatcher();
 
             // The path to monitor the files
-            watcher.Path = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\NewData";
+            watcher.Path = $@"{Environment.GetEnvironmentVariable("newDataFolder")}";
 
             // Disable monitoring sub directories
             watcher.IncludeSubdirectories = false;

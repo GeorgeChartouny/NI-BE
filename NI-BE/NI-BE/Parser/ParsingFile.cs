@@ -23,7 +23,7 @@ namespace NI_BE.Parser
                 if (Path.GetExtension(e.FullPath.ToString()) == ".txt")
                 {
                     //  string csvFile = Path.ChangeExtension(e.FullPath,"csv");
-                    string csvFile = Path.Combine(@"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
+                    string csvFile = Path.Combine($@"{Environment.GetEnvironmentVariable("parserFolder")}", Path.ChangeExtension(Path.GetFileName(e.FullPath), "csv"));
                     string slot = "";
                     string slot1 = "";
                     string slot2 = "";
@@ -290,7 +290,7 @@ namespace NI_BE.Parser
                         }
                         finally
                         {
-                            targetPath = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\OldData";
+                            targetPath = $@"{Environment.GetEnvironmentVariable("oldDataFolder")}";
                             LoadData loadData = new LoadData();
                             loadData.ExecuteLoader(csvFile);
 

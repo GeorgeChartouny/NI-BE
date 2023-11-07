@@ -24,14 +24,14 @@ namespace NI_BE.DataDb
             {
                 string table = "";
                 string fileName = FileLoc.Split("\\").Last();
-                string moveLocation = @"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\LoadedParsedData";
+                string moveLocation = Environment.GetEnvironmentVariable("loadedData");
                 if (fileName.Contains("RADIO_LINK_POWER"))
                 {
-                    table = "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER";
+                    table = Environment.GetEnvironmentVariable("table_Radio_link_power");
                 }
                 else if (fileName.Contains("TN_RFInputPower"))
                 {
-                    table = "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER";
+                    table = Environment.GetEnvironmentVariable("table_RF_Input_power");
                 }
 
                 try
@@ -40,8 +40,8 @@ namespace NI_BE.DataDb
                     string CopyCommand = $@"COPY {table}
                 FROM LOCAL '{FileLoc}'
                 DELIMITER ',' SKIP 1
-                REJECTED DATA 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\rejected_{fileName}'
-                EXCEPTIONS 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\exceptions_{fileName}' ;";
+                REJECTED DATA '{Environment.GetEnvironmentVariable("rejectedPath")}{fileName}'
+                EXCEPTIONS '{Environment.GetEnvironmentVariable("exceptionPath")}{fileName}' ;";
                     bool success = dBConnection.ConnectAndExecuteQuery(CopyCommand);
                     if (success)
                     {

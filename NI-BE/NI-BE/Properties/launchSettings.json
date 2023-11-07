@@ -21,9 +21,12 @@
         "DATABASE": "test",
         "USERNAME": "bootcamp5",
         "PASSWORD": "bootcamp52023",
+        "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
+        "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
-        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData"
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
+        "rejectedPath":"C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\UnloadedData\rejected_"
       }
     },
     "https": {
@@ -38,9 +41,13 @@
         "DATABASE": "test",
         "USERNAME": "bootcamp5",
         "PASSWORD": "bootcamp52023",
+        "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
+        "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
-        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData"
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
+        "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_"
+
 
 
 
@@ -56,9 +63,16 @@
         "DATABASE": "test",
         "USERNAME": "bootcamp5",
         "PASSWORD": "bootcamp52023",
+        "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
+        "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
-        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData"
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
+        "oldDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\OldData",
+        "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
+        "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_"
+
 
 
 

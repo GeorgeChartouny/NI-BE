@@ -1,9 +1,9 @@
 using System.Data;
 using babyNI_BE.Watcher;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+//using Microsoft.Data.SqlClient;
+//using Microsoft.EntityFrameworkCore;
 using NI_BE.DataDb;
-using Vertica.Data.VerticaClient;
+//using Vertica.Data.VerticaClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,15 +23,16 @@ dbConnection.EstablishConnection();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // app.UseSwagger();
+    // app.UseSwaggerUI();
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();

@@ -3,6 +3,7 @@ using babyNI_BE.Watcher;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using NI_BE.DataDb;
+using NI_BE.Services;
 using Vertica.Data.VerticaClient;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddHostedService<Worker>();
+builder.Services.AddTransient<ParserService>(); 
+builder.Services.AddTransient<LoaderService>();
 
 // DB Connection
 //builder.Services.AddDbContext<AppDbContext>(options =>

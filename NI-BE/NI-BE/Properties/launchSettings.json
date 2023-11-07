@@ -20,7 +20,9 @@
         "HOST": "10.10.4.231",
         "DATABASE": "test",
         "USERNAME": "bootcamp5",
-        "PASSWORD": "bootcamp52023"
+        "PASSWORD": "bootcamp52023",
+        "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData"
       }
     },
     "https": {
@@ -34,7 +36,11 @@
         "HOST": "10.10.4.231",
         "DATABASE": "test",
         "USERNAME": "bootcamp5",
-        "PASSWORD": "bootcamp52023"
+        "PASSWORD": "bootcamp52023",
+        "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData"
+
+
       }
     },
     "IIS Express": {
@@ -46,7 +52,11 @@
         "HOST": "10.10.4.231",
         "DATABASE": "test",
         "USERNAME": "bootcamp5",
-        "PASSWORD": "bootcamp52023"
+        "PASSWORD": "bootcamp52023",
+        "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData"
+
+
       }
     }
   }

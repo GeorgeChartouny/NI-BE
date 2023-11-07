@@ -53,11 +53,14 @@ namespace NI_BE.DataDb
 
                             File.Move(FileLoc, moveLocation);
                             Console.WriteLine("File loaded successfully and moved to loaded folder.");
+
+                            // Aggregate data into hourly table
                             var aggregateHourly = new HourlyAggregation();
                            bool hourlySuccess = aggregateHourly.CreateAndInsertHourlyTable();
 
                             if (hourlySuccess)
                             {
+                                //Aggregate data into daily table
                                 var aggregateDaily = new DailyAggregation();
                                 aggregateDaily.CreateAndInsertDailyTable();
                             }

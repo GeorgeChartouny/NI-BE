@@ -1,20 +1,13 @@
-﻿using NI_BE.DataDb;
-using System.Text;
-using NI_BE.Parser;
-using System.Security.Cryptography;
-using NI_BE.DataDb.Models;
-
-namespace NI_BE.Services
+﻿namespace NI_BE.Services
 {
-    public class ParserService
+    public class LoaderService
     {
-        private readonly string watcherFolder = Environment.GetEnvironmentVariable("watcherFolder");
-
+        private readonly string watcherFolder = Environment.GetEnvironmentVariable("parsedFolder");
 
 
         public async Task<string> UploadFile(IFormFile file)
         {
-            if (file == null || file.Length == 0)
+            if (file == null || file.Length == 0 || !file.FileName.Contains(".csv"))
             {
                 return "Invalid file";
             }
@@ -25,9 +18,9 @@ namespace NI_BE.Services
             {
                 await file.CopyToAsync(stream);
             }
-            return "File uploaded and parsed.";
+            return "File uploaded and loaded to the database.";
         }
-
     }
+
 
 }

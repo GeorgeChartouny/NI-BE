@@ -20,4 +20,10 @@
     <PackageReference Include="Vertica.Data" Version="23.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\LoadedParsedData\" />
+    <Folder Include="Data\NewData\" />
+    <Folder Include="Data\OldData\" />
+  </ItemGroup>
+
 </Project>

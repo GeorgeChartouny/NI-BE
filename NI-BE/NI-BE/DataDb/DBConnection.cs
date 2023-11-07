@@ -1,4 +1,6 @@
 ﻿using System.Data;
+using System.Reflection.PortableExecutable;
+using NI_BE.DataDb.Models;
 using Vertica.Data.VerticaClient;
 
 namespace NI_BE.DataDb
@@ -209,12 +211,12 @@ namespace NI_BE.DataDb
         }
 
 
-        public List<string> ConnectAndExecuteReader(string query)
+        public List<AggDataModel> ConnectAndExecuteReader(string query)
         {
             VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
             SetConnectionConfiguration(builder);
             VerticaConnection _conn = new VerticaConnection(builder.ToString());
-            List<string> result = new List<string>();
+            var result = new List<AggDataModel>();
 
             try
             {
@@ -231,9 +233,24 @@ namespace NI_BE.DataDb
                         int rows = 0;
                         while (dataReader.Read())
                         {
-                            result.Add(string.Join(",", dataReader[rows]));
+                            //result.Add(string.Join(",", dataReader[rows]));
+                            //rows++;
 
+                            var rowResult = new AggDataModel
+                            {
+                                DATETIME_KEY = dataReader.GetDateTime(dataReader.GetOrdinal("DATETIME_KEY")),
+                                TIME_Stamp = dataReader.GetDateTime(dataReader.GetOrdinal("TIME_Stamp")),
+                                NE_TYPE = dataReader.IsDBNull(dataReader.GetOrdinal("NE_TYPE")) ? null : dataReader.GetString(dataReader.GetOrdinal("NE_TYPE")),
+                                NE_ALIAS = dataReader.IsDBNull(dataReader.GetOrdinal("NE_ALIAS")) ? null : dataReader.GetString(dataReader.GetOrdinal("NE_ALIAS")),
+                                RSL_INPUT_POWER = dataReader.GetFloat(dataReader.GetOrdinal("RSL_INPUT_POWER")),
+                                MAX_RX_LEVEL = dataReader.GetFloat(dataReader.GetOrdinal("MAX_RX_LEVEL")),
+                                RSL_DEVIATION = dataReader.GetFloat(dataReader.GetOrdinal("RSL_DEVIATION"))
+                            };
+
+                            result.Add(rowResult);
                         }
+                        dataReader.Close();
+                        CloseConnection(_conn);
 
                     }
 

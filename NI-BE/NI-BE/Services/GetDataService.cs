@@ -6,13 +6,12 @@ namespace NI_BE.Services
     public class GetDataService
     {
 
-        public List<string> GetData(string NeRequested, DateTime datetime_key, string aggTime)
+        public List<AggDataModel> GetData(GetDataModel getDataModel)
         {
 
-
             string query = $@"SELECT * 
-                        FROM {aggTime} 
-                        WHERE {NeRequested} IS NOT NULL AND DATETIM_KEY = '{datetime_key}';
+                        FROM {getDataModel.aggTime} 
+                        WHERE {getDataModel.NeRequested} IS NOT NULL AND DATETIME_KEY = '{getDataModel.datetime_key}';
 ";
 
             var dbConnection = new DBConnection();

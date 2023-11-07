@@ -12,7 +12,7 @@ namespace NI_BE.DataDb
         public void EstablishConnection()
         {
             VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
- 
+
             SetConnectionConfiguration(builder);
 
             VerticaConnection _conn = new VerticaConnection(builder.ToString());
@@ -28,7 +28,7 @@ namespace NI_BE.DataDb
 
                         //Create command
                         VerticaCommand command = _conn.CreateCommand();
-  
+
                         // Command for tables to create if they do not exist in the database
                         string CreateRadioTable = @"CREATE TABLE IF NOT EXISTS TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER (
                             NETWORK_SID INT NOT NULL,
@@ -206,6 +206,53 @@ namespace NI_BE.DataDb
                 return false;
 
             }
+        }
+
+
+        public List<string> ConnectAndExecuteReader(string query)
+        {
+            VerticaConnectionStringBuilder builder = new VerticaConnectionStringBuilder();
+            SetConnectionConfiguration(builder);
+            VerticaConnection _conn = new VerticaConnection(builder.ToString());
+            List<string> result = new List<string>();
+
+            try
+            {
+                OpenConnection(_conn);
+
+                try
+                {
+                    using (_conn)
+                    {
+                        VerticaCommand command = _conn.CreateCommand();
+                        command.CommandText = query;
+
+                        VerticaDataReader dataReader = command.ExecuteReader();
+                        int rows = 0;
+                        while (dataReader.Read())
+                        {
+                            result.Add(string.Join(",", dataReader[rows]));
+
+                        }
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine("Failed to read from the database: " + ex.Message);
+
+                }
+            }
+            catch (Exception e)
+            {
+
+
+                Console.WriteLine("Failed to connect to the database: " + e.Message);
+
+            }
+            return result;
         }
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddHostedService<Worker>();
 builder.Services.AddTransient<ParserService>(); 
 builder.Services.AddTransient<LoaderService>();
+builder.Services.AddTransient<AggregationService>();
 
 // DB Connection
 //builder.Services.AddDbContext<AppDbContext>(options =>

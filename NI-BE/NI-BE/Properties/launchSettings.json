@@ -22,7 +22,8 @@
         "USERNAME": "bootcamp5",
         "PASSWORD": "bootcamp52023",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
-        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData"
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData"
       }
     },
     "https": {
@@ -38,7 +39,9 @@
         "USERNAME": "bootcamp5",
         "PASSWORD": "bootcamp52023",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
-        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData"
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData"
+
 
 
       }
@@ -54,7 +57,9 @@
         "USERNAME": "bootcamp5",
         "PASSWORD": "bootcamp52023",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
-        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData"
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData"
+
 
 
       }

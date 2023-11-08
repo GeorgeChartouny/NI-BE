@@ -35,7 +35,7 @@ namespace NI_BE.Aggregation
                     string aggregateCommand = @"
                     INSERT INTO TRANS_MW_AGG_SLOT_HOURLY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT  RADIO.DATETIME_KEY,date_trunc('hour',RADIO.TIME), CONCAT('NE_TYPE ',RADIO.NETYPE) ,
-                    ""-"",
+                    '-',
                     MAX(RADIO.maxrxlevel)AS MAX_RX_LEVEL,
                     MAX(RFINPUT.RFInputPower)AS RSL_INPUT_POWER,
                     (ABS(MAX(RFINPUT.RFInputPower)))-(ABS(MAX(RADIO.maxrxlevel))) AS RSL_DEVIATION
@@ -45,7 +45,7 @@ namespace NI_BE.Aggregation
 
                     INSERT INTO TRANS_MW_AGG_SLOT_HOURLY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT  RADIO.DATETIME_KEY,date_trunc('hour',RADIO.TIME),
-                    ""-"",
+                    '-',
                     CONCAT('NE_ALIAS ',RADIO.NEALIAS),
                     MAX(RADIO.maxrxlevel)AS MAX_RX_LEVEL,
                     MAX(RFINPUT.RFInputPower)AS RSL_INPUT_POWER,

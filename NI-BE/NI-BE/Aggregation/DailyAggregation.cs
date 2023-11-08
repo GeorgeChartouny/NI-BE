@@ -6,7 +6,7 @@ namespace NI_BE.Aggregation
     {
         public DailyAggregation()
         {
-            
+
         }
 
         public bool CreateAndInsertDailyTable()
@@ -26,13 +26,14 @@ namespace NI_BE.Aggregation
                 ) SEGMENTED BY HASH( TIME_Stamp ) ALL NODES;";
 
                 bool createSuccess = dBConnection.ConnectAndExecuteQuery(createCommand);
+
                 if (createSuccess)
                 {
                     string aggregateCommand = @"
                     INSERT INTO TRANS_MW_AGG_SLOT_DAILY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT DATETIME_KEY, DATE_TRUNC('DAY',TIME_STAMP), 
                      NE_TYPE,
-                     ""-"",
+                     '-',
                     MAX(RSL_INPUT_POWER)AS RSL_INPUT_POWER,
                     MAX(MAX_RX_LEVEL) AS MAX_RS_LEVEL,
                     (ABS(MAX(RSL_INPUT_POWER)))-(ABS(MAX(MAX_RX_LEVEL))) AS RSL_DEVIATION
@@ -42,7 +43,7 @@ namespace NI_BE.Aggregation
 
                     INSERT INTO TRANS_MW_AGG_SLOT_DAILY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT DATETIME_KEY, DATE_TRUNC('DAY',TIME_STAMP), 
-                     ""-"",
+                     '-',
                      NE_ALIAS,
                     MAX(RSL_INPUT_POWER)AS RSL_INPUT_POWER,
                     MAX(MAX_RX_LEVEL) AS MAX_RS_LEVEL,
@@ -57,12 +58,14 @@ namespace NI_BE.Aggregation
                     {
                         Console.WriteLine("Data inserted into daily table successfully.");
 
-                    }else
+                    }
+                    else
                     {
                         Console.WriteLine("Could not insert data into daily table.");
 
                     }
-                }else
+                }
+                else
                 {
                     Console.WriteLine("Creating table daily was not succeeded.");
 

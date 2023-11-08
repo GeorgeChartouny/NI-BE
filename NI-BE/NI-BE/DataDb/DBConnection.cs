@@ -97,12 +97,12 @@ namespace NI_BE.DataDb
                         //{
                         //    foreach (DataColumn column in table.Columns)
                         //    {
-                        //        Console.WriteLine(row[column] + "\t");
+                        //        Log.Information(row[column] + "\t");
                         //    }
-                        //    Console.WriteLine();
+                        //    Log.Information();
                         //    i++;
                         //}
-                        //Console.WriteLine(i + "rows returned.");
+                        //Log.Information(i + "rows returned.");
                     }
                     CloseConnection(_conn);
 
@@ -110,7 +110,6 @@ namespace NI_BE.DataDb
                 catch (Exception e)
                 {
 
-                   // Console.WriteLine("Failed to execute query: " + e.Message);
                     Log.Information("Failed to execute query: " + e.Message);
                 }
 
@@ -118,7 +117,6 @@ namespace NI_BE.DataDb
             catch (Exception ex)
             {
 
-               // Console.WriteLine("Failed to connect to the database: " + ex.Message);
                 Log.Information("Failed to connect to the database: " + ex.Message);
             }
 
@@ -140,12 +138,10 @@ namespace NI_BE.DataDb
             {
 
                 conn.Open();
-                //Console.WriteLine("Connection Established.");
                 Log.Information("Connection Established.");
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Cannot connect: " + ex.Message);
                 Log.Information("Cannot connect: " + ex.Message);
             }
         }
@@ -159,7 +155,6 @@ namespace NI_BE.DataDb
             catch (Exception ex)
             {
 
-                Console.WriteLine("Cannot close the connection: " + ex.Message);
                 Log.Information("Cannot close the connection: " + ex.Message);
             }
 
@@ -195,14 +190,14 @@ namespace NI_BE.DataDb
 
 
                     }
-                    Console.WriteLine("Query Executed Successfully.");
+                    Log.Information("Query Executed Successfully.");
                     CloseConnection(_conn);
                     return true;
 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Failed to execute query: " + ex.Message);
+                    Log.Information("Failed to execute query: " + ex.Message);
                     return false;
 
                 }
@@ -210,7 +205,7 @@ namespace NI_BE.DataDb
             catch (Exception e)
             {
 
-                Console.WriteLine("Failed to connect to the database: " + e.Message);
+                Log.Information("Failed to connect to the database: " + e.Message);
                 return false;
 
             }
@@ -264,7 +259,7 @@ namespace NI_BE.DataDb
                 catch (Exception ex)
                 {
 
-                    Console.WriteLine("Failed to read from the database: " + ex.Message);
+                    Log.Information("Failed to read from the database: " + ex.Message);
 
                 }
             }
@@ -272,7 +267,7 @@ namespace NI_BE.DataDb
             {
 
 
-                Console.WriteLine("Failed to connect to the database: " + e.Message);
+                Log.Information("Failed to connect to the database: " + e.Message);
 
             }
             return result;

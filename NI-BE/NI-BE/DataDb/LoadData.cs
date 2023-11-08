@@ -1,4 +1,5 @@
 ﻿using NI_BE.Aggregation;
+using Serilog;
 
 namespace NI_BE.DataDb
 {
@@ -52,7 +53,7 @@ namespace NI_BE.DataDb
                         {
 
                             File.Move(FileLoc, moveLocation);
-                            Console.WriteLine("File loaded successfully and moved to loaded folder.");
+                            Log.Information("File loaded successfully and moved to loaded folder.");
 
                             // Aggregate data into hourly table
                             var aggregateHourly = new HourlyAggregation();
@@ -68,13 +69,13 @@ namespace NI_BE.DataDb
                     }
                     else
                     {
-                        Console.WriteLine("File not loaded and not moved to loaded folder");
+                        Log.Information("File not loaded and not moved to loaded folder");
                     }
                 }
                 catch (Exception e)
                 {
 
-                    Console.WriteLine("Error in Loading process: " + e.Message);
+                    Log.Information("Error in Loading process: " + e.Message);
                 }
 
 

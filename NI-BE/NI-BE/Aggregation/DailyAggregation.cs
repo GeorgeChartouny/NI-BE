@@ -1,4 +1,5 @@
 ﻿using NI_BE.DataDb;
+using Serilog;
 
 namespace NI_BE.Aggregation
 {
@@ -56,25 +57,25 @@ namespace NI_BE.Aggregation
                     bool aggregateSuccess = dBConnection.ConnectAndExecuteQuery(aggregateCommand);
                     if (aggregateSuccess)
                     {
-                        Console.WriteLine("Data inserted into daily table successfully.");
+                        Log.Information("Data inserted into daily table successfully.");
 
                     }
                     else
                     {
-                        Console.WriteLine("Could not insert data into daily table.");
+                        Log.Information("Could not insert data into daily table.");
 
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Creating table daily was not succeeded.");
+                    Log.Information("Creating table daily was not succeeded.");
 
                 }
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Could not create the daily table: " + ex.Message);
+                Log.Information("Could not create the daily table: " + ex.Message);
                 return false;
             }
             return true;

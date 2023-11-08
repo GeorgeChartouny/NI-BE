@@ -1,4 +1,5 @@
 ﻿using NI_BE.DataDb;
+using Serilog;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -19,7 +20,7 @@ namespace NI_BE.Parser
             {
 
                 string targetPath = "";
-                Console.WriteLine("path: " + Path.GetExtension(e.FullPath.ToString()));
+                Log.Information("path: " + Path.GetExtension(e.FullPath.ToString()));
                 if (Path.GetExtension(e.FullPath.ToString()) == ".txt")
                 {
                     //  string csvFile = Path.ChangeExtension(e.FullPath,"csv");
@@ -108,7 +109,7 @@ namespace NI_BE.Parser
                                     catch (Exception exep)
                                     {
 
-                                        Console.WriteLine("Error adding fields: " + exep.Message);
+                                        Log.Information("Error adding fields: " + exep.Message);
                                     }
                                     finally
                                     {
@@ -281,12 +282,12 @@ namespace NI_BE.Parser
                         }
                         catch (IOException exception) when (y<=tries) 
                         {
-                            Console.WriteLine(exception.Message);
+                            Log.Information(exception.Message);
                             Thread.Sleep(delayTime);
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine("Error: " + ex.Message);
+                            Log.Information("Error: " + ex.Message);
                         }
                         finally
                         {
@@ -310,15 +311,15 @@ namespace NI_BE.Parser
                     {
                         File.Delete(e.FullPath.ToString());
                     }
-                    Console.WriteLine(e.Name + " File moved successfully to organizer folder");
+                    Log.Information(e.Name + " File moved successfully to organizer folder");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Log.Information(ex.Message);
                 }
             }
 
-            Console.WriteLine(e.Name + " " + e.ChangeType);
+            Log.Information(e.Name + " " + e.ChangeType);
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿
 
 using NI_BE.DataDb;
+using Serilog;
 
 namespace NI_BE.Aggregation
 {
@@ -31,7 +32,7 @@ namespace NI_BE.Aggregation
                 bool createSuccess = dBConnection.ConnectAndExecuteQuery(createTableCommand);
                 if (createSuccess)
                 {
-                    Console.WriteLine("Hourly table created.");
+                    Log.Information("Hourly table created.");
                     string aggregateCommand = @"
                     INSERT INTO TRANS_MW_AGG_SLOT_HOURLY(DATETIME_KEY, TIME_Stamp, NE_TYPE,NE_ALIAS, RSL_INPUT_POWER, MAX_RX_LEVEL, RSL_DEVIATION) 
                     SELECT  RADIO.DATETIME_KEY,date_trunc('hour',RADIO.TIME), CONCAT('NE_TYPE ',RADIO.NETYPE) ,
@@ -57,24 +58,24 @@ namespace NI_BE.Aggregation
                     bool aggregateSuccess = dBConnection.ConnectAndExecuteQuery(aggregateCommand);
                     if (aggregateSuccess)
                     {
-                        Console.WriteLine("Data inserted into hourly table successfully.");
+                        Log.Information("Data inserted into hourly table successfully.");
                     }
                     else
                     {
-                        Console.WriteLine("Could not insert data into hourly table.");
+                        Log.Information("Could not insert data into hourly table.");
                     }
 
                 }
                 else
                 {
-                    Console.WriteLine("Creating table Hourly was not succeeded.");
+                    Log.Information("Creating table Hourly was not succeeded.");
                 }
 
             }
             catch (Exception ex)
             {
 
-                Console.WriteLine("Error creating hourly Table: " + ex.Message);
+                Log.Information("Error creating hourly Table: " + ex.Message);
                 return false;
             }
             return true;

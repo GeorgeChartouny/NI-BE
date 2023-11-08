@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.Extensions.FileSystemGlobbing;
 using NI_BE.DataDb;
 using NI_BE.Parser;
+using Serilog;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace babyNI_BE.Watcher
@@ -50,7 +51,7 @@ namespace babyNI_BE.Watcher
             }
             catch (IOException ex)
             {
-                Console.WriteLine(ex.Message);
+                Log.Information(ex.Message);
 
             }
 
@@ -66,7 +67,7 @@ namespace babyNI_BE.Watcher
 
         public void OnRenamed(object source, RenamedEventArgs e)
         {
-            Console.WriteLine(e.OldName + " is changed to " + e.Name);
+            Log.Information(e.OldName + " is changed to " + e.Name);
         }
 
     }

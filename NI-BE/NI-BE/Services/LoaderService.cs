@@ -1,4 +1,5 @@
 ﻿using NI_BE.DataDb;
+using Serilog;
 
 namespace NI_BE.Services
 {
@@ -30,7 +31,7 @@ namespace NI_BE.Services
             catch (Exception ex)
             {
 
-                Console.WriteLine("Could not load the file into the database using the api: ",ex.Message);
+                Log.Information("Could not load the file into the database using the api: ",ex.Message);
             }
 
             return "File uploaded and loaded to the database.";

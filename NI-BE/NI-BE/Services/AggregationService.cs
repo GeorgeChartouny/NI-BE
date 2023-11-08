@@ -1,5 +1,6 @@
 ﻿using NI_BE.Aggregation;
 using NI_BE.DataDb;
+using Serilog;
 
 namespace NI_BE.Services
 {
@@ -37,7 +38,7 @@ namespace NI_BE.Services
             catch (Exception ex)
             {
 
-                Console.WriteLine("Could not aggregate the data using the api: ", ex.Message);
+                Log.Information("Could not aggregate the data using the api: ", ex.Message);
             }
 
             return "Data aggregated and loaded to the database.";

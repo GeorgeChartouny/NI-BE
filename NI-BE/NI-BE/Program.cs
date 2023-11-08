@@ -4,6 +4,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using NI_BE.DataDb;
 using NI_BE.Services;
+using Serilog;
 using Vertica.Data.VerticaClient;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,10 @@ builder.Services.AddTransient<ParserService>();
 builder.Services.AddTransient<LoaderService>();
 builder.Services.AddTransient<AggregationService>();
 builder.Services.AddTransient<GetDataService>();
+
+// Serilog Configuration
+Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
+builder.Host.UseSerilog(); //log on each request 
 
 // DB Connection
 //builder.Services.AddDbContext<AppDbContext>(options =>
@@ -38,6 +43,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

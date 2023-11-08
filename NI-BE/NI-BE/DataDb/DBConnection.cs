@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Reflection.PortableExecutable;
 using NI_BE.DataDb.Models;
+using Serilog;
 using Vertica.Data.VerticaClient;
 
 namespace NI_BE.DataDb
@@ -109,14 +110,16 @@ namespace NI_BE.DataDb
                 catch (Exception e)
                 {
 
-                    Console.WriteLine("Failed to execute query: " + e.Message);
+                   // Console.WriteLine("Failed to execute query: " + e.Message);
+                    Log.Information("Failed to execute query: " + e.Message);
                 }
 
             }
             catch (Exception ex)
             {
 
-                Console.WriteLine("Failed to connect to the database: " + ex.Message);
+               // Console.WriteLine("Failed to connect to the database: " + ex.Message);
+                Log.Information("Failed to connect to the database: " + ex.Message);
             }
 
         }
@@ -137,11 +140,13 @@ namespace NI_BE.DataDb
             {
 
                 conn.Open();
-                Console.WriteLine("Connection Established.");
+                //Console.WriteLine("Connection Established.");
+                Log.Information("Connection Established.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Cannot connect: " + ex.Message);
+                //Console.WriteLine("Cannot connect: " + ex.Message);
+                Log.Information("Cannot connect: " + ex.Message);
             }
         }
 
@@ -155,6 +160,7 @@ namespace NI_BE.DataDb
             {
 
                 Console.WriteLine("Cannot close the connection: " + ex.Message);
+                Log.Information("Cannot close the connection: " + ex.Message);
             }
 
         }

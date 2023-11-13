@@ -52,7 +52,7 @@ namespace NI_BE.Aggregation
                     MAX(RFINPUT.RFInputPower)AS RSL_INPUT_POWER,
                     (ABS(MAX(RFINPUT.RFInputPower)))-(ABS(MAX(RADIO.maxrxlevel))) AS RSL_DEVIATION
                     FROM trans_mw_erc_pm_tn_radio_link_power AS RADIO
-                    INNER JOIN TRANS_MW_ERC_PM_WAN_RFINPUTPOWER AS RFINPUT ON RFINPUT.NETYPE = RADIO.NETYPE
+                    INNER JOIN TRANS_MW_ERC_PM_WAN_RFINPUTPOWER AS RFINPUT ON RFINPUT.NEALIAS = RADIO.NEALIAS
                     GROUP BY 1,2,4;
                         ";
                     bool aggregateSuccess = dBConnection.ConnectAndExecuteQuery(aggregateCommand);

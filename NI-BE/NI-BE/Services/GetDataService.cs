@@ -11,7 +11,7 @@ namespace NI_BE.Services
 
             string query = $@"SELECT * 
                         FROM {getDataModel.aggTime} 
-                        WHERE {getDataModel.NeRequested} IS NOT NULL AND DATETIME_KEY = '{getDataModel.datetime_key}';
+                        WHERE {getDataModel.NeRequested} !='-' AND DATETIME_KEY = '{getDataModel.datetime_key}';
 ";
 
             var dbConnection = new DBConnection();

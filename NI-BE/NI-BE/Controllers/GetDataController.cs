@@ -16,9 +16,12 @@ namespace NI_BE.Controllers
             _getDataService = getDataService;
         }
 
-        [HttpGet("get-data")]
+        [HttpPost("get-data")]
         public IActionResult DataGetController([FromBody]GetDataModel getDataModel) 
         {
+         if(getDataModel != null)
+            {
+
             var getDataFromDatabase = _getDataService.GetData(getDataModel);
             if(getDataFromDatabase != null)
             {
@@ -27,6 +30,10 @@ namespace NI_BE.Controllers
             }else
             {
                 return BadRequest();
+            }
+            }   else
+            {
+                return BadRequest("Invalid data format.");
             }
         }
     }

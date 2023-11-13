@@ -9,11 +9,22 @@ using Vertica.Data.VerticaClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                     .AllowAnyMethod();
+        });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddHostedService<Worker>();
-builder.Services.AddTransient<ParserService>(); 
+builder.Services.AddTransient<ParserService>();
 builder.Services.AddTransient<LoaderService>();
 builder.Services.AddTransient<AggregationService>();
 builder.Services.AddTransient<GetDataService>();
@@ -43,6 +54,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowAllOrigins");
 
 app.UseSerilogRequestLogging();
 

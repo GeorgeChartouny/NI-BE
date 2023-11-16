@@ -3,7 +3,7 @@
     public class GetDataModel
     {
         public string NeRequested { get; set; }
-        public string datetime_key { get; set; }
+        public string? time_stamp { get; set; }
         public string aggTime { get; set; }
     }
 }

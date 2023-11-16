@@ -227,9 +227,6 @@ namespace NI_BE.Parser
 
                                         else if (fileName.Contains("TN_RFInputPower"))
                                         {
-
-
-
                                             //int[] removedColumns = { 8, 10, 11, 14 };
                                             int[] removedColumns = { 10, 12, 13, 16 };
 
@@ -238,7 +235,6 @@ namespace NI_BE.Parser
                                                 .Select((x, Index) => removedColumns.Contains(Index) ? "" : x)
                                                 .Where(x => !string.IsNullOrWhiteSpace(x))
                                                 .ToList();
-
 
                                             if (i != 0 && lineEntries[4].Contains("."))
                                             {

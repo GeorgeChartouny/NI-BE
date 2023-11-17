@@ -35,12 +35,3 @@ time_stamp = '{getDataModel.time_stamp}'
        
     }
 }
-
-//(
-//    CASE
-//        WHEN {getDataModel.datetime_key} = 'null' THEN 1 
-//        WHEN {getDataModel.datetime_key} is null THEN 1 
-
-//        ELSE time_stamp = '{getDataModel.datetime_key}'
-//    END
-//);

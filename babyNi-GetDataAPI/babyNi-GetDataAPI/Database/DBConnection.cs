@@ -28,7 +28,7 @@ namespace babyNi_GetDataAPI.Database
                     using(_conn)
                     {
 
-                        VerticaCommand command = new VerticaCommand();
+                        VerticaCommand command =_conn.CreateCommand();
                         command.CommandText = query;
 
                         VerticaDataReader dataReader = command.ExecuteReader();
@@ -98,6 +98,7 @@ namespace babyNi_GetDataAPI.Database
             try
             {
                 conn.Close();
+                Console.WriteLine("Connection Closed.");
             }
             catch (Exception ex)
             {

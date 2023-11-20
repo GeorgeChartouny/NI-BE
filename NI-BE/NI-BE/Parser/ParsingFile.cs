@@ -14,7 +14,18 @@ namespace NI_BE.Parser
         }
         public void OnChanged(object source, FileSystemEventArgs e)
         {
+
             string fileName = Path.GetFileName(e.FullPath);
+
+            string fileCheck = Path.Combine(Environment.GetEnvironmentVariable("oldDataFolder"), fileName);
+
+            if(File.Exists(fileCheck))
+            {
+                Log.Information("File already Parsed and Loaded into the database");
+            }else
+            {
+
+            
 
             if (e.ChangeType == WatcherChangeTypes.Created)
             {
@@ -316,6 +327,7 @@ namespace NI_BE.Parser
             }
 
             Log.Information(e.Name + " " + e.ChangeType);
+        }
         }
 
     }

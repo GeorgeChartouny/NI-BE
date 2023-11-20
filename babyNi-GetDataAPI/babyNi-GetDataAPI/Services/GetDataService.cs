@@ -1,4 +1,5 @@
-﻿using babyNi_GetDataAPI.Models;
+﻿using babyNi_GetDataAPI.Database;
+using babyNi_GetDataAPI.Models;
 
 namespace babyNi_GetDataAPI.Services
 {
@@ -22,6 +23,10 @@ namespace babyNi_GetDataAPI.Services
                         time_stamp = '{getDataModel.time_stamp}'
                         ";
             }
+            var dbConnection = new DBConnection();
+            var queryResult = dbConnection.ConnectAndExecuteReader(query);
+            return queryResult;
+            
         }
     }
 }

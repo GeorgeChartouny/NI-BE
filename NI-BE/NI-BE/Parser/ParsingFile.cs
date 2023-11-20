@@ -14,7 +14,6 @@ namespace NI_BE.Parser
         }
         public void OnChanged(object source, FileSystemEventArgs e)
         {
-            Console.WriteLine("e: ", e);
 
             string fileName = Path.GetFileName(e.FullPath);
 

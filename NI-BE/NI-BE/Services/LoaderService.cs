@@ -16,11 +16,19 @@ namespace NI_BE.Services
             }
 
             var filePath = Path.Combine(parsedFolder, file.FileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            try
             {
-                await file.CopyToAsync(stream);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
             }
+            catch (Exception ex)
+            {
+
+                Log.Information("File copy using stream was not successful: " + ex.Message);
+            }
+      
 
             try
             {

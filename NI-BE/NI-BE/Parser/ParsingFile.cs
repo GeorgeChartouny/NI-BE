@@ -12,7 +12,7 @@ namespace NI_BE.Parser
         {
             
         }
-        public void OnChanged(object source, FileSystemEventArgs e)
+        public async void OnChanged(object source, FileSystemEventArgs e)
         {
 
             string fileName = Path.GetFileName(e.FullPath);
@@ -299,8 +299,41 @@ namespace NI_BE.Parser
                         {
                             targetPath = $@"{Environment.GetEnvironmentVariable("oldDataFolder")}";
                             LoadData loadData = new LoadData();
-                            loadData.ExecuteLoader(csvFile);
+                            //loadData.ExecuteLoader(csvFile);
 
+                                try
+                                {
+                                    string apiEndpoint = "https://localhost:7035/api/Loader/load-file";
+                                    string filePath = Path.GetFullPath(csvFile);
+
+                                    using (HttpClient client = new HttpClient())
+                                {
+                                        var content = new MultipartFormDataContent();
+
+                                        using (var fileStream = new FileStream(filePath, FileMode.Open))
+                                        {
+                                            var fileContent = new StreamContent(fileStream);
+
+                                            content.Add(fileContent, "file", Path.GetFileName(filePath));
+
+                                            HttpResponseMessage response = await client.PostAsync(apiEndpoint, content);
+
+
+                                    if (response.IsSuccessStatusCode)
+                                    {
+                                        string apiResponse = await response.Content.ReadAsStringAsync();
+                                        Log.Information(apiResponse);
+                                    }else
+                                            {
+                                                Log.Information("File upload failed with status: " + response.StatusCode);
+                                            }
+                                        }
+                                }
+
+                                }catch(HttpRequestException httpE)
+                                {
+                                    Log.Information("HTTP request exception: " + httpE.Message);
+                                }
                         }
                     }
 

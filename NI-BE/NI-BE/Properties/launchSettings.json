@@ -23,6 +23,7 @@
         "PASSWORD": "bootcamp52023",
         "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
         "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
+        "datasFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\",
         "watcherFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",

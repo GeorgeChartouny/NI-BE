@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NI_BE.DataDb.Models;
 using NI_BE.Services;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace NI_BE.Controllers
 {
@@ -21,7 +22,7 @@ namespace NI_BE.Controllers
         {
             string fileName = Path.GetFileName(fileUpload.File.FileName);
 
-            string uploadDirectory = Path.Combine("C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data", "Uploads");
+            string uploadDirectory = Path.Combine("C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\", "Uploads");
 
             if(!Directory.Exists(uploadDirectory))
             {

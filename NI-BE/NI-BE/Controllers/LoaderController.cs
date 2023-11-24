@@ -19,7 +19,24 @@ namespace NI_BE.Controllers
         [HttpPost("load-file")]
         public async Task<IActionResult> LoadControllerPost([FromForm] FileUpload fileUpload)
         {
-            var result = await _loaderService.UploadFile(fileUpload.File);
+            string fileName = Path.GetFileName(fileUpload.File.FileName);
+
+            string uploadDirectory = Path.Combine("C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data", "Uploads");
+
+            if(!Directory.Exists(uploadDirectory))
+            {
+                Directory.CreateDirectory(uploadDirectory);
+            }
+            
+            string filePath = Path.Combine(uploadDirectory, fileName);
+
+            using(var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await fileUpload.File.CopyToAsync(stream);
+            }
+
+
+            var result = await _loaderService.UploadFile(filePath);
 
             if (result == "Invalid file")
             {

@@ -62,7 +62,7 @@ namespace NI_BE.Aggregation
                     }
                     else
                     {
-                        Log.Information("Could not insert data into daily table.");
+                        Log.Information("Could not insert data into daily table. Check that all appropriate tables have data.");
 
                     }
                 }

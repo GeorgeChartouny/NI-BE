@@ -17,8 +17,9 @@ namespace NI_BE.DataDb
             _fileName = FileName;
         }
 
-        public void ExecuteLoader(string FileLoc)
+        public async void ExecuteLoader(string FileLoc)
         {
+            string parsedFolder = Environment.GetEnvironmentVariable("parserFolder");
 
             DBConnection dBConnection = new DBConnection();
             if (FileLoc.Contains(".csv"))
@@ -35,6 +36,10 @@ namespace NI_BE.DataDb
                     table = Environment.GetEnvironmentVariable("table_RF_Input_power");
                 }
 
+                if (!File.Exists(parsedFolder + "\\" + fileName) && !FileLoc.Equals( parsedFolder+fileName))
+                {
+                    FileLoc = parsedFolder + "\\" + FileLoc;
+                }
                 try
                 {
                     // sql copy command based on the file passed in the parameter
@@ -52,20 +57,52 @@ namespace NI_BE.DataDb
                         if (!File.Exists(moveLocation))
                         {
 
-                            File.Move(FileLoc, moveLocation);
+                            try
+                            {
+
+                         
+                            File.Copy(FileLoc, moveLocation);
                             Log.Information("File loaded successfully and moved to loaded folder.");
 
-                            // Aggregate data into hourly table
-                            var aggregateHourly = new HourlyAggregation();
-                           bool hourlySuccess = aggregateHourly.CreateAndInsertHourlyTable();
-
-                            if (hourlySuccess)
-                            {
-                                //Aggregate data into daily table
-                                var aggregateDaily = new DailyAggregation();
-                                aggregateDaily.CreateAndInsertDailyTable();
                             }
+                            catch (Exception ex)
+                            {
+
+                                Log.Information("Unable to copy the file to the loaded folder: " + ex.Message);
+                            }
+                            // Aggregate data into hourly table
+                            // var aggregateHourly = new HourlyAggregation();
+                            //bool hourlySuccess = aggregateHourly.CreateAndInsertHourlyTable();
                         }
+                            try
+                            {
+                                string apiEndpoint =$@"{Environment.GetEnvironmentVariable("appUrl")}"+ "/api/Aggregation/aggregate-file";
+                                string filePath = Path.GetFullPath(moveLocation);
+
+                                using(HttpClient client = new HttpClient())
+                                {
+                                    var content = new MultipartFormDataContent();
+
+                                    using (var fileStream = new FileStream(filePath, FileMode.Open))
+                                    {
+                                        var fileContent = new StreamContent(fileStream);
+                                        content.Add(fileContent, "file", Path.GetFileName(filePath));
+
+                                        HttpResponseMessage hourlySuccess = await client.PostAsync(apiEndpoint, content);
+                                    }
+                                }
+                            }catch (Exception ex)
+                            {
+
+                                Log.Information("Could not call the aggregated api : " + ex.Message);
+                            }
+
+                            //if (hourlySuccess)
+                            //{
+                            //    //Aggregate data into daily table
+                            //    var aggregateDaily = new DailyAggregation();
+                            //    aggregateDaily.CreateAndInsertDailyTable();
+                            //}
                     }
                     else
                     {

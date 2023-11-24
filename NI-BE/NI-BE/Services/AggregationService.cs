@@ -15,7 +15,11 @@ namespace NI_BE.Services
                 return "Invalid file";
             }
 
-            var filePath = Path.Combine(loadedData, file.FileName);
+            var filePath = Path.Combine(loadedData, file.FileName+"_Aggregated.csv");
+
+            if (!File.Exists(filePath))
+            {
+
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
@@ -40,8 +44,13 @@ namespace NI_BE.Services
 
                 Log.Information("Could not aggregate the data using the api: ", ex.Message);
             }
-
+                Log.Information("Data aggregated and loaded to the database.");
             return "Data aggregated and loaded to the database.";
+            }else
+            {
+                Log.Information("This file is already aggregated.");
+                return "This file is already aggregated.";
+            }
         }
     }
 }

@@ -16,8 +16,8 @@ namespace babyNi_GetDataAPI.Controllers
             _getDataService = getDataService;
         }
 
-        [HttpPost("get-data")]
-        public IActionResult DataGetController([FromBody] GetDataModel getDataModel) 
+        [HttpPost("get-data/")]
+        public IActionResult DataGetController( GetDataModel getDataModel) 
         {
             
             if(getDataModel != null) 

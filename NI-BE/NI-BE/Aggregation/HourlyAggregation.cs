@@ -62,7 +62,7 @@ namespace NI_BE.Aggregation
                     }
                     else
                     {
-                        Log.Information("Could not insert data into hourly table.");
+                        Log.Information("Could not insert data into hourly table.Check that all appropriate tables have data.");
                     }
 
                 }

@@ -77,7 +77,7 @@ namespace babyNI_LoaderAPI.Middlewares
                         }
                         try
                         {
-                            string apiEndpoint = $@"{Environment.GetEnvironmentVariable("appUrl")}" + "/api/Aggregation/aggregate-file";
+                            string apiEndpoint = $@"{Environment.GetEnvironmentVariable("aggregationUrl")}" + "/api/Aggregation/aggregate-file";
                             string filePath = Path.GetFullPath(moveLocation);
 
                             using (HttpClient client = new HttpClient())

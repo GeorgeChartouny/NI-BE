@@ -31,7 +31,8 @@
         "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
-        "appUrl": "http://localhost:5176"
+        "appUrl": "http://localhost:5176",
+        "loaderUrl": "http://localhost:7196"
       }
     },
     "https": {
@@ -55,7 +56,8 @@
         "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
-        "appUrl": "https://localhost:7035"
+        "appUrl": "https://localhost:7035",
+        "loaderUrl": "https://localhost:7196"
 
 
 
@@ -81,9 +83,6 @@
         "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_"
-
-
-
 
       }
     }

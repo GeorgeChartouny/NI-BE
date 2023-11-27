@@ -27,7 +27,8 @@
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
-        "appUrl": "http://localhost:7196"
+        "appUrl": "http://localhost:7196",
+        "aggregationUrl": "http://localhost:7211"
 
       }
     },
@@ -49,7 +50,8 @@
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
-        "appUrl": "http://localhost:7196"
+        "appUrl": "http://localhost:7196",
+        "aggregationUrl": "https://localhost:7211"
 
       }
     },
@@ -69,7 +71,8 @@
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
-        "appUrl": "http://localhost:7196"
+        "appUrl": "http://localhost:7196",
+        "aggregationUrl": "https://localhost:7211"
 
       }
     }

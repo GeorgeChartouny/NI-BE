@@ -305,7 +305,7 @@ namespace NI_BE.Parser
                                 try
                                 {
                                     // send the csv file to the loader api: sending the file not the path.
-                                    string apiEndpoint = $@"{Environment.GetEnvironmentVariable("appUrl")}" + "/api/Loader/load-file";
+                                    string apiEndpoint = $@"{Environment.GetEnvironmentVariable("loaderUrl")}" + "/api/Loader/load-file";
                                     string filePath = Path.GetFullPath(csvFile);
                                     Console.WriteLine("csvFile: " + csvFile);
                                     Console.WriteLine("filePath: " + filePath);

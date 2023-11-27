@@ -10,7 +10,7 @@ namespace babyNi_GetDataAPI.Services
         {
             string query;
 
-            if(getDataModel.time_stamp == null)
+            if(getDataModel.time_stampFrom == null || getDataModel.time_stampTo == null)
             {
                 query = $@"SELECT * 
                         FROM {getDataModel.aggTime} 
@@ -20,7 +20,7 @@ namespace babyNi_GetDataAPI.Services
                 query = $@"SELECT * 
                         FROM {getDataModel.aggTime} 
                         WHERE {getDataModel.NeRequested} !='-'  AND 
-                        time_stamp = '{getDataModel.time_stamp}'
+                        time_stamp BETWEEN '{getDataModel.time_stampFrom}' AND '{getDataModel.time_stampTo}'
                         ";
             }
             var dbConnection = new DBConnection();

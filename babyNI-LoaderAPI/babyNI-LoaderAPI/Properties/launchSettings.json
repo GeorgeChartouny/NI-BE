@@ -1,0 +1,77 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:22582",
+      "sslPort": 44358
+    }
+  },
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5291",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HOST": "10.10.4.231",
+        "DATABASE": "test",
+        "USERNAME": "bootcamp5",
+        "PASSWORD": "bootcamp52023",
+        "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
+        "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
+        "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
+        "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
+        "appUrl": "http://localhost:7196"
+
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7196;http://localhost:5291",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HOST": "10.10.4.231",
+        "DATABASE": "test",
+        "USERNAME": "bootcamp5",
+        "PASSWORD": "bootcamp52023",
+        "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
+        "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
+        "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
+        "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
+        "appUrl": "http://localhost:7196"
+
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HOST": "10.10.4.231",
+        "DATABASE": "test",
+        "USERNAME": "bootcamp5",
+        "PASSWORD": "bootcamp52023",
+        "table_Radio_link_power": "TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER",
+        "table_RF_Input_power": "TRANS_MW_ERC_PM_WAN_RFINPUTPOWER",
+        "parserFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\ParsedData",
+        "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
+        "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
+        "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
+        "appUrl": "http://localhost:7196"
+
+      }
+    }
+  }
+}

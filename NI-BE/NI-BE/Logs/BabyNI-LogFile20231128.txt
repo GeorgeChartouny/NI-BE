@@ -1,0 +1,15 @@
+11/28/2023 12:19:28 +02:00 [Information] - Message: Connection Established.
+11/28/2023 12:19:29 +02:00 [Information] - Message: Worker running at time: 11/28/2023 12:19:29 +02:00
+11/28/2023 12:19:29 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+11/28/2023 12:19:29 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+11/28/2023 12:19:29 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+11/28/2023 12:19:29 +02:00 [Information] - Message: Hosting environment: "Development"
+11/28/2023 12:19:29 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+11/28/2023 12:19:30 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+11/28/2023 12:19:30 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 476.6686ms
+11/28/2023 12:19:30 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+11/28/2023 12:19:30 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+11/28/2023 12:19:30 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 23.5442ms
+11/28/2023 12:19:30 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.5736ms
+11/28/2023 12:19:31 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+11/28/2023 12:19:31 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.2864ms

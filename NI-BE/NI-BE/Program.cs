@@ -25,8 +25,6 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddHostedService<Worker>();
 builder.Services.AddTransient<ParserService>();
-builder.Services.AddTransient<LoaderService>();
-builder.Services.AddTransient<AggregationService>();
 //builder.Services.AddTransient<GetDataService>();
 
 // Serilog Configuration

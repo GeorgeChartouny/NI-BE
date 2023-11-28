@@ -21,14 +21,14 @@ namespace NI_BE.Parser
             string fileCheck = Path.Combine(Environment.GetEnvironmentVariable("oldDataFolder"), fileName);
 
             //Don't parse parsed and loaded file
-            if(File.Exists(fileCheck))
-            {
-                Log.Information("File already Parsed and Loaded into the database");
-            }else
-            {
+            //if(File.Exists(fileCheck))
+            //{
+            //    Log.Information("File already Parsed and Loaded into the database");
+            //}else
+            //{
 
-            if (e.ChangeType == WatcherChangeTypes.Created)
-            {
+                if (e.ChangeType == WatcherChangeTypes.Created)
+                {
 
                 string targetPath = "";
                 Log.Information("path: " + Path.GetExtension(e.FullPath.ToString()));
@@ -342,7 +342,7 @@ namespace NI_BE.Parser
                 {
                     Log.Information(ex.Message);
                 }
-            }
+            //}
 
             Log.Information(e.Name + " " + e.ChangeType);
         }

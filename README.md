@@ -26,7 +26,7 @@ Once a file is dropped it will directly calls the parser to parser the file base
 "exceptionPath": exceptionPath location,
 "appUrl": The application url,
 "loaderUrl": The loader url 
-
+```
 ```bash
 ###API
  POST

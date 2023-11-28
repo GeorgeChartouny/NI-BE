@@ -27,7 +27,8 @@ Once a file is dropped it will directly calls the parser to parser the file base
 "appUrl": The application url,
 "loaderUrl": The loader url 
 
-```http
+```bash
+###API
  POST
 
 | EndPoint                 | Body     | Description                |
@@ -57,13 +58,13 @@ After successfully parsing the file, the Loader API will be called and load the 
 "aggregationUrl": The aggregator url 
 ```
 
-```http
+```bash
+###API
  POST
 
 | EndPoint               | Body     | Description                |
 | :--------------------- | :------- | :------------------------- |
 | `api/Loader/load-file` | `file`   | **Required**.              |
-
 ```
 
 ## babyNI-AggregatorAPI
@@ -83,13 +84,13 @@ Once the data is loaded, the Aggregator API will be called and create the reques
 "exceptionPath": exceptionPath location,
 "appUrl": The application url,
 ```
-```http
+```bash
+###API
  POST
 
 | EndPoint                          | Body     | Description                |
 | :-------------------------------- | :------- | :------------------------- |
 | `api/Aggregation/aggreagate-file` | `file`   | **Required**.              |
-
 ```
 
 ## babyNI-GetDataAPI
@@ -102,7 +103,8 @@ This API is responsible for fetching the data from the database based on what th
 "USERNAME":Database username ,
 "PASSWORD": Database password,
 ```
-```http
+```bash
+###API
  POST
 
 | EndPoint                 | Body          | Description                |

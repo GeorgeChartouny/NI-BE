@@ -113,7 +113,8 @@ This API is responsible for fetching the data from the database based on what th
 
 dataModel:{
   "neRequested": "string",
-  "time_stamp": "string",
+  "time_stampFrom": "string", // not required
+  "time_stampTo": "string",   // not required
   "aggTime": "string"
 }
 ```

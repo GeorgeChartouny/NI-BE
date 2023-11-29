@@ -21,10 +21,11 @@ namespace NI_BE.Parser
             string fileCheck = Path.Combine(Environment.GetEnvironmentVariable("oldDataFolder"), fileName);
 
             //Don't parse parsed and loaded file
-            //if(File.Exists(fileCheck))
+            //if (File.Exists(fileCheck))
             //{
             //    Log.Information("File already Parsed and Loaded into the database");
-            //}else
+            //}
+            //else
             //{
 
                 if (e.ChangeType == WatcherChangeTypes.Created)
@@ -342,9 +343,9 @@ namespace NI_BE.Parser
                 {
                     Log.Information(ex.Message);
                 }
-            //}
+                //}
 
-            Log.Information(e.Name + " " + e.ChangeType);
+                Log.Information(e.Name + " " + e.ChangeType);
         }
         }  
     }

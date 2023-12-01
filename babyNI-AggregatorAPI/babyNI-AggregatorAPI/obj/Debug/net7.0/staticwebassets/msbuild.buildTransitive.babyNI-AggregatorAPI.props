@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\babyNI-AggregatorAPI.props" />
-</Project>

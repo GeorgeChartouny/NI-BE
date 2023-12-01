@@ -1,0 +1,121 @@
+11/29/2023 10:38:22 +02:00 [Information] - Message: Now listening on: "https://localhost:7196"
+11/29/2023 10:38:22 +02:00 [Information] - Message: Now listening on: "http://localhost:5291"
+11/29/2023 10:38:22 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+11/29/2023 10:38:22 +02:00 [Information] - Message: Hosting environment: "Development"
+11/29/2023 10:38:22 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\babyNI-LoaderAPI\babyNI-LoaderAPI"
+11/29/2023 10:38:26 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/swagger/index.html - -
+11/29/2023 10:38:27 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/swagger/index.html - - - 200 - text/html;charset=utf-8 1169.2717ms
+11/29/2023 10:38:27 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/_framework/aspnetcore-browser-refresh.js - -
+11/29/2023 10:38:27 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 24.3817ms
+11/29/2023 10:38:27 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/_vs/browserLink - -
+11/29/2023 10:38:27 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 98.1577ms
+11/29/2023 10:38:29 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/swagger/v1/swagger.json - -
+11/29/2023 10:38:30 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 251.7026ms
+11/29/2023 10:41:48 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="9e2fa8ce-bb5f-474f-98c4-658014a9b7ac" 230247
+11/29/2023 10:41:48 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:41:48 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:41:49 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:41:50 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:41:50 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:41:50 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:41:50 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 1770.5043ms
+11/29/2023 10:41:50 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:41:50 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 1911.3072 ms
+11/29/2023 10:41:50 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="9e2fa8ce-bb5f-474f-98c4-658014a9b7ac" 230247 - 200 - text/plain;+charset=utf-8 1940.8735ms
+11/29/2023 10:42:35 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="0cb93b81-6ad6-4b57-b750-ae01c2147b1e" 230247
+11/29/2023 10:42:35 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:42:35 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:42:35 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:42:36 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:42:36 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:42:36 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 259.0744ms
+11/29/2023 10:42:36 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:42:36 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 285.6807 ms
+11/29/2023 10:42:36 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="0cb93b81-6ad6-4b57-b750-ae01c2147b1e" 230247 - 200 - text/plain;+charset=utf-8 291.0490ms
+11/29/2023 10:43:10 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="4c4e5ed7-8c55-4011-8bb7-4f1b97093876" 230247
+11/29/2023 10:43:10 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:43:10 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:43:10 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:43:10 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:43:10 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:43:10 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:43:10 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 307.8616ms
+11/29/2023 10:43:10 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:43:10 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 316.9463 ms
+11/29/2023 10:43:10 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="4c4e5ed7-8c55-4011-8bb7-4f1b97093876" 230247 - 200 - text/plain;+charset=utf-8 332.0346ms
+11/29/2023 10:43:36 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="918aa098-ff4b-40b9-b1e7-a8d090290ce3" 926852
+11/29/2023 10:43:36 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:43:36 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:43:36 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:43:37 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:43:37 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:43:37 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:43:37 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 617.0021ms
+11/29/2023 10:43:37 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:43:37 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 688.8813 ms
+11/29/2023 10:43:37 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="918aa098-ff4b-40b9-b1e7-a8d090290ce3" 926852 - 200 - text/plain;+charset=utf-8 755.5649ms
+11/29/2023 10:44:34 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="f9e7c98a-71c4-4752-b165-b82355d7732a" 230247
+11/29/2023 10:44:34 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:44:34 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:44:34 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:44:34 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:44:34 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:44:34 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:44:34 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 361.5407ms
+11/29/2023 10:44:34 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:44:34 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 378.9164 ms
+11/29/2023 10:44:34 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="f9e7c98a-71c4-4752-b165-b82355d7732a" 230247 - 200 - text/plain;+charset=utf-8 411.7027ms
+11/29/2023 10:45:33 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="4ca57316-acbd-4753-af1b-71c9ab05e91d" 230247
+11/29/2023 10:45:33 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:45:33 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:45:33 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:45:33 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:45:33 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:45:33 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 258.7564ms
+11/29/2023 10:45:33 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:45:33 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 273.5109 ms
+11/29/2023 10:45:33 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="4ca57316-acbd-4753-af1b-71c9ab05e91d" 230247 - 200 - text/plain;+charset=utf-8 288.8988ms
+11/29/2023 10:45:57 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="222aa19a-2e58-4c44-b821-27ae77c91a1e" 230247
+11/29/2023 10:45:57 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:45:57 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:45:57 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:45:57 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:45:57 +02:00 [Information] - Message: Could not call the aggregated api : The process cannot access the file 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\LoadedParsedData\SOEM1_TN_RADIO_LINK_POWER_20200312_001500.csv_Loaded.csv' because it is being used by another process.
+11/29/2023 10:45:57 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:45:57 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 315.197ms
+11/29/2023 10:45:57 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:45:57 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 336.5053 ms
+11/29/2023 10:45:57 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="222aa19a-2e58-4c44-b821-27ae77c91a1e" 230247 - 200 - text/plain;+charset=utf-8 349.7350ms
+11/29/2023 10:49:39 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="54364c07-f85c-4adc-915f-513e41d4bc75" 230247
+11/29/2023 10:49:39 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:49:39 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:49:39 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:49:39 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:49:39 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:49:39 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:49:39 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 405.9578ms
+11/29/2023 10:49:39 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:49:39 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 460.7762 ms
+11/29/2023 10:49:39 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="54364c07-f85c-4adc-915f-513e41d4bc75" 230247 - 200 - text/plain;+charset=utf-8 478.4148ms
+11/29/2023 10:52:12 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="7b26d5f9-fb6b-4444-9ea3-3d6bfa42cc2e" 230247
+11/29/2023 10:52:12 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:52:12 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:52:13 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:52:13 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:52:13 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:52:13 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:52:13 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 469.8831ms
+11/29/2023 10:52:13 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:52:13 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 522.0419 ms
+11/29/2023 10:52:13 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="7b26d5f9-fb6b-4444-9ea3-3d6bfa42cc2e" 230247 - 200 - text/plain;+charset=utf-8 546.3542ms
+11/29/2023 10:52:26 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="97ada02d-0bcd-444e-8745-70353b3d9b4e" 926852
+11/29/2023 10:52:26 +02:00 [Information] - Message: Executing endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:52:26 +02:00 [Information] - Message: Route matched with "{action = \"LoadControllerPost\", controller = \"Loader\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoadControllerPost(babyNI_LoaderAPI.Models.FileUpload)" on controller "babyNI_LoaderAPI.Controllers.LoaderController" ("babyNI-LoaderAPI").
+11/29/2023 10:52:26 +02:00 [Information] - Message: Connection Established.
+11/29/2023 10:52:27 +02:00 [Information] - Message: Query Executed Successfully.
+11/29/2023 10:52:27 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/29/2023 10:52:27 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/29/2023 10:52:27 +02:00 [Information] - Message: Executed action "babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)" in 538.7622ms
+11/29/2023 10:52:27 +02:00 [Information] - Message: Executed endpoint '"babyNI_LoaderAPI.Controllers.LoaderController.LoadControllerPost (babyNI-LoaderAPI)"'
+11/29/2023 10:52:27 +02:00 [Information] - Message: HTTP "POST" "/api/Loader/load-file" responded 200 in 556.4943 ms
+11/29/2023 10:52:27 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary="97ada02d-0bcd-444e-8745-70353b3d9b4e" 926852 - 200 - text/plain;+charset=utf-8 561.4477ms

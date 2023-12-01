@@ -1,0 +1,328 @@
+11/20/2023 12:06:47 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:06:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:06:48 +02:00
+11/20/2023 12:06:48 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+11/20/2023 12:06:48 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+11/20/2023 12:06:48 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+11/20/2023 12:06:48 +02:00 [Information] - Message: Hosting environment: "Development"
+11/20/2023 12:06:48 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+11/20/2023 12:06:50 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/swagger-ui-bundle.js - -
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 1288.6712ms
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/swagger-ui-standalone-preset.js - -
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/swagger-ui.css - -
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 67.6795ms
+11/20/2023 12:06:52 +02:00 [Information] - Message: The file "/swagger-ui-bundle.js" was not modified
+11/20/2023 12:06:52 +02:00 [Information] - Message: The file "/swagger-ui-standalone-preset.js" was not modified
+11/20/2023 12:06:52 +02:00 [Information] - Message: The file "/swagger-ui.css" was not modified
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/swagger-ui-bundle.js - - - 304 - text/javascript 81.3023ms
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/swagger-ui-standalone-preset.js - - - 304 - text/javascript 84.2028ms
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/swagger-ui.css - - - 304 - text/css 94.4857ms
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 195.9935ms
+11/20/2023 12:06:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+11/20/2023 12:06:53 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.1660ms
+11/20/2023 12:06:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:06:53 +02:00
+11/20/2023 12:06:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:06:58 +02:00
+11/20/2023 12:07:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:03 +02:00
+11/20/2023 12:07:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:08 +02:00
+11/20/2023 12:07:10 +02:00 [Information] - Message: path: .txt
+11/20/2023 12:07:11 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:07:11 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:07:11 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/20/2023 12:07:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:13 +02:00
+11/20/2023 12:07:13 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:07:13 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:07:13 +02:00 [Information] - Message: Hourly table created.
+11/20/2023 12:07:14 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:07:15 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:07:15 +02:00 [Information] - Message: Data inserted into hourly table successfully.
+11/20/2023 12:07:15 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:07:15 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:07:16 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:07:16 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:07:16 +02:00 [Information] - Message: Data inserted into daily table successfully.
+11/20/2023 12:07:16 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt File moved successfully to organizer folder
+11/20/2023 12:07:16 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt Created
+11/20/2023 12:07:16 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt Changed
+11/20/2023 12:07:16 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt Deleted
+11/20/2023 12:07:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:18 +02:00
+11/20/2023 12:07:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:23 +02:00
+11/20/2023 12:07:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:28 +02:00
+11/20/2023 12:07:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:33 +02:00
+11/20/2023 12:07:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:38 +02:00
+11/20/2023 12:07:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:43 +02:00
+11/20/2023 12:07:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:48 +02:00
+11/20/2023 12:07:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:53 +02:00
+11/20/2023 12:07:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:07:58 +02:00
+11/20/2023 12:08:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:03 +02:00
+11/20/2023 12:08:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:08 +02:00
+11/20/2023 12:08:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:13 +02:00
+11/20/2023 12:08:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:18 +02:00
+11/20/2023 12:08:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:23 +02:00
+11/20/2023 12:08:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:28 +02:00
+11/20/2023 12:08:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:33 +02:00
+11/20/2023 12:08:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:38 +02:00
+11/20/2023 12:08:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:43 +02:00
+11/20/2023 12:08:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:48 +02:00
+11/20/2023 12:08:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:53 +02:00
+11/20/2023 12:08:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:08:58 +02:00
+11/20/2023 12:09:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:03 +02:00
+11/20/2023 12:09:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:08 +02:00
+11/20/2023 12:09:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:13 +02:00
+11/20/2023 12:09:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:18 +02:00
+11/20/2023 12:09:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:23 +02:00
+11/20/2023 12:09:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:28 +02:00
+11/20/2023 12:09:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:33 +02:00
+11/20/2023 12:09:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:38 +02:00
+11/20/2023 12:09:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:43 +02:00
+11/20/2023 12:09:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:48 +02:00
+11/20/2023 12:09:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:53 +02:00
+11/20/2023 12:09:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:09:58 +02:00
+11/20/2023 12:32:02 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:32:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:03 +02:00
+11/20/2023 12:32:04 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+11/20/2023 12:32:04 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+11/20/2023 12:32:04 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+11/20/2023 12:32:04 +02:00 [Information] - Message: Hosting environment: "Development"
+11/20/2023 12:32:04 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+11/20/2023 12:32:05 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+11/20/2023 12:32:05 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 313.9952ms
+11/20/2023 12:32:05 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+11/20/2023 12:32:05 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 16.8004ms
+11/20/2023 12:32:05 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+11/20/2023 12:32:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 187.4857ms
+11/20/2023 12:32:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:08 +02:00
+11/20/2023 12:32:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:13 +02:00
+11/20/2023 12:32:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:18 +02:00
+11/20/2023 12:32:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:23 +02:00
+11/20/2023 12:32:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:28 +02:00
+11/20/2023 12:32:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:33 +02:00
+11/20/2023 12:32:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:38 +02:00
+11/20/2023 12:32:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:43 +02:00
+11/20/2023 12:32:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:48 +02:00
+11/20/2023 12:32:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:53 +02:00
+11/20/2023 12:32:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:32:58 +02:00
+11/20/2023 12:33:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:03 +02:00
+11/20/2023 12:33:03 +02:00 [Information] - Message: Request starting HTTP/2 POST https://localhost:7035/api/Parser/parse-file multipart/form-data;+boundary=----WebKitFormBoundaryGTVu7ANJ9c8RDERn 1620739
+11/20/2023 12:33:03 +02:00 [Information] - Message: CORS policy execution successful.
+11/20/2023 12:33:03 +02:00 [Information] - Message: Executing endpoint '"NI_BE.Controllers.ParserController.ParseControllerPost (NI-BE)"'
+11/20/2023 12:33:03 +02:00 [Information] - Message: Route matched with "{action = \"ParseControllerPost\", controller = \"Parser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ParseControllerPost(NI_BE.DataDb.Models.FileUpload)" on controller "NI_BE.Controllers.ParserController" ("NI-BE").
+11/20/2023 12:33:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:09 +02:00
+11/20/2023 12:33:09 +02:00 [Information] - Message: path: .txt
+11/20/2023 12:33:10 +02:00 [Information] - Message: The process cannot access the file 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\NewData\SOEM1_TN_RFInputPower_20210121_051500.txt' because it is being used by another process.
+11/20/2023 12:33:10 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+11/20/2023 12:33:10 +02:00 [Information] - Message: Executed action "NI_BE.Controllers.ParserController.ParseControllerPost (NI-BE)" in 6150.307ms
+11/20/2023 12:33:10 +02:00 [Information] - Message: Executed endpoint '"NI_BE.Controllers.ParserController.ParseControllerPost (NI-BE)"'
+11/20/2023 12:33:10 +02:00 [Information] - Message: HTTP "POST" "/api/Parser/parse-file" responded 200 in 6207.6065 ms
+11/20/2023 12:33:10 +02:00 [Information] - Message: Request finished HTTP/2 POST https://localhost:7035/api/Parser/parse-file multipart/form-data;+boundary=----WebKitFormBoundaryGTVu7ANJ9c8RDERn 1620739 - 200 - text/plain;+charset=utf-8 6235.8699ms
+11/20/2023 12:33:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:14 +02:00
+11/20/2023 12:33:15 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:33:15 +02:00 [Information] - Message: Failed to execute query: [22V23] ERROR: Client error: File C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData\SOEM1_TN_RFInputPower_20210121_051500.csv does not exist. (in function CheckFile() at Vertica.Data.dll:10752)
+11/20/2023 12:33:15 +02:00 [Information] - Message: File not loaded and not moved to loaded folder
+11/20/2023 12:33:15 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:33:16 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:33:16 +02:00 [Information] - Message: File loaded successfully and moved to loaded folder.
+11/20/2023 12:33:16 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:33:16 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:33:16 +02:00 [Information] - Message: Hourly table created.
+11/20/2023 12:33:17 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:33:18 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:33:18 +02:00 [Information] - Message: Data inserted into hourly table successfully.
+11/20/2023 12:33:18 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:33:18 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:33:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:19 +02:00
+11/20/2023 12:33:21 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:33:21 +02:00 [Information] - Message: Query Executed Successfully.
+11/20/2023 12:33:21 +02:00 [Information] - Message: Data inserted into daily table successfully.
+11/20/2023 12:33:21 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt File moved successfully to organizer folder
+11/20/2023 12:33:21 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Created
+11/20/2023 12:33:21 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Changed
+11/20/2023 12:33:21 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Changed
+11/20/2023 12:33:21 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Changed
+11/20/2023 12:33:21 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Deleted
+11/20/2023 12:33:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:24 +02:00
+11/20/2023 12:33:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:29 +02:00
+11/20/2023 12:33:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:34 +02:00
+11/20/2023 12:33:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:39 +02:00
+11/20/2023 12:33:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:44 +02:00
+11/20/2023 12:33:49 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:49 +02:00
+11/20/2023 12:33:54 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:54 +02:00
+11/20/2023 12:33:59 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:33:59 +02:00
+11/20/2023 12:34:04 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:04 +02:00
+11/20/2023 12:34:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:09 +02:00
+11/20/2023 12:34:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:14 +02:00
+11/20/2023 12:34:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:19 +02:00
+11/20/2023 12:34:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:24 +02:00
+11/20/2023 12:34:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:29 +02:00
+11/20/2023 12:34:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:34 +02:00
+11/20/2023 12:34:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:39 +02:00
+11/20/2023 12:34:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:44 +02:00
+11/20/2023 12:34:49 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:49 +02:00
+11/20/2023 12:34:54 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:54 +02:00
+11/20/2023 12:34:59 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:34:59 +02:00
+11/20/2023 12:35:04 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:04 +02:00
+11/20/2023 12:35:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:09 +02:00
+11/20/2023 12:35:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:14 +02:00
+11/20/2023 12:35:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:19 +02:00
+11/20/2023 12:35:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:24 +02:00
+11/20/2023 12:35:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:29 +02:00
+11/20/2023 12:35:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:34 +02:00
+11/20/2023 12:35:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:39 +02:00
+11/20/2023 12:35:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:44 +02:00
+11/20/2023 12:35:49 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:49 +02:00
+11/20/2023 12:35:54 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:54 +02:00
+11/20/2023 12:35:59 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:35:59 +02:00
+11/20/2023 12:36:04 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:04 +02:00
+11/20/2023 12:36:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:09 +02:00
+11/20/2023 12:36:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:14 +02:00
+11/20/2023 12:36:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:19 +02:00
+11/20/2023 12:36:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:24 +02:00
+11/20/2023 12:36:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:29 +02:00
+11/20/2023 12:36:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:34 +02:00
+11/20/2023 12:36:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:39 +02:00
+11/20/2023 12:36:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:44 +02:00
+11/20/2023 12:36:49 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:49 +02:00
+11/20/2023 12:36:54 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:54 +02:00
+11/20/2023 12:36:59 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:36:59 +02:00
+11/20/2023 12:37:04 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:04 +02:00
+11/20/2023 12:37:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:09 +02:00
+11/20/2023 12:37:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:14 +02:00
+11/20/2023 12:37:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:19 +02:00
+11/20/2023 12:37:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:24 +02:00
+11/20/2023 12:37:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:29 +02:00
+11/20/2023 12:37:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:34 +02:00
+11/20/2023 12:37:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:39 +02:00
+11/20/2023 12:37:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:44 +02:00
+11/20/2023 12:37:49 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:49 +02:00
+11/20/2023 12:37:54 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:54 +02:00
+11/20/2023 12:37:59 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:37:59 +02:00
+11/20/2023 12:38:04 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:04 +02:00
+11/20/2023 12:38:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:09 +02:00
+11/20/2023 12:38:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:14 +02:00
+11/20/2023 12:38:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:19 +02:00
+11/20/2023 12:38:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:24 +02:00
+11/20/2023 12:38:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:29 +02:00
+11/20/2023 12:38:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:34 +02:00
+11/20/2023 12:38:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:39 +02:00
+11/20/2023 12:38:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:44 +02:00
+11/20/2023 12:38:49 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:49 +02:00
+11/20/2023 12:38:54 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:54 +02:00
+11/20/2023 12:38:59 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:38:59 +02:00
+11/20/2023 12:39:04 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:04 +02:00
+11/20/2023 12:39:09 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:09 +02:00
+11/20/2023 12:39:14 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:14 +02:00
+11/20/2023 12:39:19 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:19 +02:00
+11/20/2023 12:39:24 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:24 +02:00
+11/20/2023 12:39:29 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:29 +02:00
+11/20/2023 12:39:34 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:34 +02:00
+11/20/2023 12:39:39 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:39 +02:00
+11/20/2023 12:39:50 +02:00 [Information] - Message: Connection Established.
+11/20/2023 12:39:51 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:51 +02:00
+11/20/2023 12:39:51 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+11/20/2023 12:39:51 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+11/20/2023 12:39:51 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+11/20/2023 12:39:51 +02:00 [Information] - Message: Hosting environment: "Development"
+11/20/2023 12:39:51 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+11/20/2023 12:39:51 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+11/20/2023 12:39:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 191.1144ms
+11/20/2023 12:39:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+11/20/2023 12:39:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 11.3352ms
+11/20/2023 12:39:52 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+11/20/2023 12:39:52 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.7924ms
+11/20/2023 12:39:56 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:39:56 +02:00
+11/20/2023 12:40:01 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:01 +02:00
+11/20/2023 12:40:06 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:06 +02:00
+11/20/2023 12:40:11 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:11 +02:00
+11/20/2023 12:40:16 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:16 +02:00
+11/20/2023 12:40:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:23 +02:00
+11/20/2023 12:40:28 +02:00 [Information] - Message: FIle already Parsed and Loaded into the database
+11/20/2023 12:40:31 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:31 +02:00
+11/20/2023 12:40:34 +02:00 [Information] - Message: FIle already Parsed and Loaded into the database
+11/20/2023 12:40:44 +02:00 [Information] - Message: Worker running at time: 11/20/2023 12:40:44 +02:00
+11/20/2023 13:21:52 +02:00 [Information] - Message: Connection Established.
+11/20/2023 13:21:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:21:53 +02:00
+11/20/2023 13:21:53 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+11/20/2023 13:21:53 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+11/20/2023 13:21:53 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+11/20/2023 13:21:53 +02:00 [Information] - Message: Hosting environment: "Development"
+11/20/2023 13:21:53 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+11/20/2023 13:21:54 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+11/20/2023 13:21:54 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 247.6863ms
+11/20/2023 13:21:54 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+11/20/2023 13:21:54 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 11.1114ms
+11/20/2023 13:21:54 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+11/20/2023 13:21:54 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.4049ms
+11/20/2023 13:21:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:21:58 +02:00
+11/20/2023 13:22:02 +02:00 [Information] - Message: File already Parsed and Loaded into the database
+11/20/2023 13:22:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:03 +02:00
+11/20/2023 13:22:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:08 +02:00
+11/20/2023 13:22:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:13 +02:00
+11/20/2023 13:22:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:18 +02:00
+11/20/2023 13:22:19 +02:00 [Information] - Message: File already Parsed and Loaded into the database
+11/20/2023 13:22:19 +02:00 [Information] - Message: File already Parsed and Loaded into the database
+11/20/2023 13:22:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:23 +02:00
+11/20/2023 13:22:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:28 +02:00
+11/20/2023 13:22:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:33 +02:00
+11/20/2023 13:22:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:38 +02:00
+11/20/2023 13:22:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:43 +02:00
+11/20/2023 13:22:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:48 +02:00
+11/20/2023 13:22:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:53 +02:00
+11/20/2023 13:22:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:22:58 +02:00
+11/20/2023 13:23:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:03 +02:00
+11/20/2023 13:23:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:08 +02:00
+11/20/2023 13:23:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:13 +02:00
+11/20/2023 13:23:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:18 +02:00
+11/20/2023 13:23:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:23 +02:00
+11/20/2023 13:23:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:28 +02:00
+11/20/2023 13:23:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:33 +02:00
+11/20/2023 13:23:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:38 +02:00
+11/20/2023 13:23:41 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt is changed to S.txt
+11/20/2023 13:23:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:43 +02:00
+11/20/2023 13:23:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:48 +02:00
+11/20/2023 13:23:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:53 +02:00
+11/20/2023 13:23:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:23:58 +02:00
+11/20/2023 13:24:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:03 +02:00
+11/20/2023 13:24:07 +02:00 [Information] - Message: S.txt is changed to sS.txt
+11/20/2023 13:24:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:08 +02:00
+11/20/2023 13:24:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:13 +02:00
+11/20/2023 13:24:18 +02:00 [Information] - Message: sS.txt is changed to sadassS.txt
+11/20/2023 13:24:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:18 +02:00
+11/20/2023 13:24:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:23 +02:00
+11/20/2023 13:24:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:28 +02:00
+11/20/2023 13:24:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:33 +02:00
+11/20/2023 13:24:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:38 +02:00
+11/20/2023 13:24:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:43 +02:00
+11/20/2023 13:24:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:48 +02:00
+11/20/2023 13:24:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:53 +02:00
+11/20/2023 13:24:58 +02:00 [Information] - Message: sadassS.txt Deleted
+11/20/2023 13:24:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:24:58 +02:00
+11/20/2023 13:25:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:03 +02:00
+11/20/2023 13:25:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:08 +02:00
+11/20/2023 13:25:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:13 +02:00
+11/20/2023 13:25:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:18 +02:00
+11/20/2023 13:25:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:23 +02:00
+11/20/2023 13:25:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:28 +02:00
+11/20/2023 13:25:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:33 +02:00
+11/20/2023 13:25:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:38 +02:00
+11/20/2023 13:25:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:43 +02:00
+11/20/2023 13:25:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:48 +02:00
+11/20/2023 13:25:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:53 +02:00
+11/20/2023 13:25:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:25:58 +02:00
+11/20/2023 13:26:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:03 +02:00
+11/20/2023 13:26:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:08 +02:00
+11/20/2023 13:26:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:13 +02:00
+11/20/2023 13:26:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:18 +02:00
+11/20/2023 13:26:23 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:23 +02:00
+11/20/2023 13:26:28 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:28 +02:00
+11/20/2023 13:26:33 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:33 +02:00
+11/20/2023 13:26:38 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:38 +02:00
+11/20/2023 13:26:43 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:43 +02:00
+11/20/2023 13:26:48 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:48 +02:00
+11/20/2023 13:26:53 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:53 +02:00
+11/20/2023 13:26:58 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:26:58 +02:00
+11/20/2023 13:27:03 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:27:03 +02:00
+11/20/2023 13:27:08 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:27:08 +02:00
+11/20/2023 13:27:13 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:27:13 +02:00
+11/20/2023 13:27:18 +02:00 [Information] - Message: Worker running at time: 11/20/2023 13:27:18 +02:00
+11/20/2023 13:27:19 +02:00 [Information] - Message: Application is shutting down...

@@ -9,6 +9,8 @@ using Vertica.Data.VerticaClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -30,6 +32,42 @@ builder.Services.AddTransient<ParserService>();
 // Serilog Configuration
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
 builder.Host.UseSerilog(); //log on each request 
+string watcherFolder = Environment.GetEnvironmentVariable("watcherFolder");
+string parserFolder = Environment.GetEnvironmentVariable("parserFolder");
+string loadedData = Environment.GetEnvironmentVariable("loadedData");
+string oldDataFolder = Environment.GetEnvironmentVariable("oldDataFolder");
+string unloadedData = Environment.GetEnvironmentVariable("unloadedData");
+
+
+if (!Directory.Exists(watcherFolder))
+{
+    Directory.CreateDirectory(watcherFolder);
+    Log.Information("watcher folder created");
+}
+
+if (!Directory.Exists(parserFolder))
+{
+    Directory.CreateDirectory(parserFolder);
+    Log.Information("parsing folder created");
+}
+
+if (!Directory.Exists(loadedData))
+{
+    Directory.CreateDirectory(loadedData);
+    Log.Information("loader folder created");
+}
+
+if (!Directory.Exists(oldDataFolder))
+{
+    Directory.CreateDirectory(oldDataFolder);
+    Log.Information("oldData folder created");
+}
+
+if (!Directory.Exists(unloadedData))
+{
+    Directory.CreateDirectory(unloadedData);
+    Log.Information("unloaded folder created");
+}
 
 // DB Connection
 //builder.Services.AddDbContext<AppDbContext>(options =>

@@ -1,0 +1,264 @@
+12/01/2023 12:18:31 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:18:32 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:18:32 +02:00
+12/01/2023 12:18:33 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+12/01/2023 12:18:33 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+12/01/2023 12:18:34 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 12:18:34 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 12:18:34 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+12/01/2023 12:18:35 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+12/01/2023 12:18:36 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 751.3930ms
+12/01/2023 12:18:36 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 12:18:36 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+12/01/2023 12:18:36 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 47.2787ms
+12/01/2023 12:18:36 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 137.3172ms
+12/01/2023 12:18:36 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+12/01/2023 12:18:37 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:18:37 +02:00
+12/01/2023 12:18:37 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 925.4281ms
+12/01/2023 12:18:42 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:18:42 +02:00
+12/01/2023 12:18:47 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:18:47 +02:00
+12/01/2023 12:18:52 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:18:52 +02:00
+12/01/2023 12:18:57 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:18:57 +02:00
+12/01/2023 12:19:02 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:02 +02:00
+12/01/2023 12:19:07 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:07 +02:00
+12/01/2023 12:19:12 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:12 +02:00
+12/01/2023 12:19:17 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:17 +02:00
+12/01/2023 12:19:30 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:19:30 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:30 +02:00
+12/01/2023 12:19:31 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+12/01/2023 12:19:31 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+12/01/2023 12:19:31 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 12:19:31 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 12:19:31 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+12/01/2023 12:19:31 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 19.9119ms
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 367.9397ms
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.4139ms
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+12/01/2023 12:19:32 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 100.3114ms
+12/01/2023 12:19:35 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:35 +02:00
+12/01/2023 12:19:40 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:40 +02:00
+12/01/2023 12:19:45 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:45 +02:00
+12/01/2023 12:19:50 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:50 +02:00
+12/01/2023 12:19:55 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:19:55 +02:00
+12/01/2023 12:20:00 +02:00 [Information] - Message: path: .csv
+12/01/2023 12:20:00 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500..csv File moved successfully to organizer folder
+12/01/2023 12:20:00 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500..csv Created
+12/01/2023 12:20:00 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:00 +02:00
+12/01/2023 12:20:05 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:05 +02:00
+12/01/2023 12:20:10 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:10 +02:00
+12/01/2023 12:20:15 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:15 +02:00
+12/01/2023 12:20:20 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:20 +02:00
+12/01/2023 12:20:25 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:25 +02:00
+12/01/2023 12:20:30 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:30 +02:00
+12/01/2023 12:20:36 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:36 +02:00
+12/01/2023 12:20:41 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:41 +02:00
+12/01/2023 12:20:46 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:46 +02:00
+12/01/2023 12:20:51 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:51 +02:00
+12/01/2023 12:20:56 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:20:56 +02:00
+12/01/2023 12:21:01 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:01 +02:00
+12/01/2023 12:21:06 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:06 +02:00
+12/01/2023 12:21:06 +02:00 [Information] - Message: path: .txt
+12/01/2023 12:21:07 +02:00 [Information] - Message: File uploaded and loaded to the database.
+12/01/2023 12:21:07 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt File moved successfully to organizer folder
+12/01/2023 12:21:07 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt Created
+12/01/2023 12:21:11 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:11 +02:00
+12/01/2023 12:21:16 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:16 +02:00
+12/01/2023 12:21:21 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:21 +02:00
+12/01/2023 12:21:26 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:26 +02:00
+12/01/2023 12:21:29 +02:00 [Information] - Message: path: .txt
+12/01/2023 12:21:29 +02:00 [Information] - Message: File uploaded and loaded to the database.
+12/01/2023 12:21:29 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt File moved successfully to organizer folder
+12/01/2023 12:21:29 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt Created
+12/01/2023 12:21:31 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:31 +02:00
+12/01/2023 12:21:36 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:36 +02:00
+12/01/2023 12:21:41 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:41 +02:00
+12/01/2023 12:21:46 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:46 +02:00
+12/01/2023 12:21:51 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:51 +02:00
+12/01/2023 12:21:56 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:21:56 +02:00
+12/01/2023 12:22:01 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:01 +02:00
+12/01/2023 12:22:06 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:06 +02:00
+12/01/2023 12:22:11 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:11 +02:00
+12/01/2023 12:22:16 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:16 +02:00
+12/01/2023 12:22:21 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:21 +02:00
+12/01/2023 12:22:26 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:26 +02:00
+12/01/2023 12:22:31 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:31 +02:00
+12/01/2023 12:22:36 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:36 +02:00
+12/01/2023 12:22:41 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:41 +02:00
+12/01/2023 12:22:46 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:46 +02:00
+12/01/2023 12:22:51 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:51 +02:00
+12/01/2023 12:22:56 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:22:56 +02:00
+12/01/2023 12:23:01 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:01 +02:00
+12/01/2023 12:23:06 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:06 +02:00
+12/01/2023 12:23:11 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:11 +02:00
+12/01/2023 12:23:16 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:16 +02:00
+12/01/2023 12:23:21 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:21 +02:00
+12/01/2023 12:23:26 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:26 +02:00
+12/01/2023 12:23:31 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:31 +02:00
+12/01/2023 12:23:36 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:36 +02:00
+12/01/2023 12:23:41 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:41 +02:00
+12/01/2023 12:23:46 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:46 +02:00
+12/01/2023 12:23:51 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:51 +02:00
+12/01/2023 12:23:56 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:23:56 +02:00
+12/01/2023 12:24:01 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:01 +02:00
+12/01/2023 12:24:06 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:06 +02:00
+12/01/2023 12:24:11 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:11 +02:00
+12/01/2023 12:24:16 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:16 +02:00
+12/01/2023 12:24:21 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:21 +02:00
+12/01/2023 12:24:26 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:26 +02:00
+12/01/2023 12:24:31 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:31 +02:00
+12/01/2023 12:24:36 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:36 +02:00
+12/01/2023 12:24:41 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:41 +02:00
+12/01/2023 12:24:46 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:46 +02:00
+12/01/2023 12:24:51 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:51 +02:00
+12/01/2023 12:24:56 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:24:56 +02:00
+12/01/2023 12:25:56 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:25:56 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:25:56 +02:00
+12/01/2023 12:25:57 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+12/01/2023 12:25:57 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+12/01/2023 12:25:57 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 12:25:57 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 12:25:57 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+12/01/2023 12:25:57 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 395.5035ms
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 10.0950ms
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.1682ms
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+12/01/2023 12:25:58 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.7942ms
+12/01/2023 12:26:01 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:01 +02:00
+12/01/2023 12:26:06 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:06 +02:00
+12/01/2023 12:26:12 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:12 +02:00
+12/01/2023 12:26:17 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:17 +02:00
+12/01/2023 12:26:22 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:22 +02:00
+12/01/2023 12:26:27 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:27 +02:00
+12/01/2023 12:26:32 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:32 +02:00
+12/01/2023 12:26:37 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:37 +02:00
+12/01/2023 12:26:42 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:42 +02:00
+12/01/2023 12:26:47 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:47 +02:00
+12/01/2023 12:26:52 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:52 +02:00
+12/01/2023 12:26:57 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:26:57 +02:00
+12/01/2023 12:27:02 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:02 +02:00
+12/01/2023 12:27:07 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:07 +02:00
+12/01/2023 12:27:12 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:12 +02:00
+12/01/2023 12:27:17 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:17 +02:00
+12/01/2023 12:27:22 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:22 +02:00
+12/01/2023 12:27:27 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:27 +02:00
+12/01/2023 12:27:32 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:32 +02:00
+12/01/2023 12:27:37 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:37 +02:00
+12/01/2023 12:27:42 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:42 +02:00
+12/01/2023 12:27:47 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:47 +02:00
+12/01/2023 12:27:52 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:52 +02:00
+12/01/2023 12:27:57 +02:00 [Information] - Message: path: .txt
+12/01/2023 12:27:57 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:27:57 +02:00
+12/01/2023 12:27:58 +02:00 [Information] - Message: File uploaded and loaded to the database.
+12/01/2023 12:27:59 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt File moved successfully to organizer folder
+12/01/2023 12:27:59 +02:00 [Information] - Message: SOEM1_TN_RADIO_LINK_POWER_20200312_001500.txt Created
+12/01/2023 12:28:02 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:02 +02:00
+12/01/2023 12:28:07 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:07 +02:00
+12/01/2023 12:28:12 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:12 +02:00
+12/01/2023 12:28:17 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:17 +02:00
+12/01/2023 12:28:22 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:22 +02:00
+12/01/2023 12:28:27 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:27 +02:00
+12/01/2023 12:28:30 +02:00 [Information] - Message: path: .txt
+12/01/2023 12:28:35 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:35 +02:00
+12/01/2023 12:28:35 +02:00 [Information] - Message: The process cannot access the file 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\NewData\SOEM1_TN_RFInputPower_20210121_051500.txt' because it is being used by another process.
+12/01/2023 12:28:40 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:40 +02:00
+12/01/2023 12:28:40 +02:00 [Information] - Message: File not found at the specified path. C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\ParsedData\SOEM1_TN_RFInputPower_20210121_051500.csv
+12/01/2023 12:28:49 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:49 +02:00
+12/01/2023 12:28:50 +02:00 [Information] - Message: Exception occurred while calling the api: File not found at the specified path. 
+12/01/2023 12:28:51 +02:00 [Information] - Message: File uploaded and loaded to the database.
+12/01/2023 12:28:51 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt File moved successfully to organizer folder
+12/01/2023 12:28:51 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Created
+12/01/2023 12:28:55 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:28:55 +02:00
+12/01/2023 12:29:00 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:00 +02:00
+12/01/2023 12:29:05 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:05 +02:00
+12/01/2023 12:29:10 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:10 +02:00
+12/01/2023 12:29:15 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:15 +02:00
+12/01/2023 12:29:20 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:20 +02:00
+12/01/2023 12:29:25 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:25 +02:00
+12/01/2023 12:29:30 +02:00 [Information] - Message: Worker running at time: 12/01/2023 12:29:30 +02:00
+12/01/2023 13:04:02 +02:00 [Information] - Message: Connection Established.
+12/01/2023 13:04:04 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:04 +02:00
+12/01/2023 13:04:05 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+12/01/2023 13:04:05 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+12/01/2023 13:04:05 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 13:04:05 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 13:04:05 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+12/01/2023 13:04:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 536.2568ms
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 68.2106ms
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 137.9432ms
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+12/01/2023 13:04:07 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.9038ms
+12/01/2023 13:04:09 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:09 +02:00
+12/01/2023 13:04:14 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:14 +02:00
+12/01/2023 13:04:19 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:19 +02:00
+12/01/2023 13:04:24 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:24 +02:00
+12/01/2023 13:04:29 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:29 +02:00
+12/01/2023 13:04:34 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:34 +02:00
+12/01/2023 13:04:39 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:39 +02:00
+12/01/2023 13:04:44 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:44 +02:00
+12/01/2023 13:04:49 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:49 +02:00
+12/01/2023 13:04:54 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:54 +02:00
+12/01/2023 13:04:59 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:04:59 +02:00
+12/01/2023 13:05:04 +02:00 [Information] - Message: watcher folder created
+12/01/2023 13:05:05 +02:00 [Information] - Message: Connection Established.
+12/01/2023 13:05:05 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:05 +02:00
+12/01/2023 13:05:05 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+12/01/2023 13:05:05 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+12/01/2023 13:05:05 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 13:05:05 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 13:05:05 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 199.9532ms
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 21.1019ms
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.7205ms
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+12/01/2023 13:05:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.1657ms
+12/01/2023 13:05:10 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:10 +02:00
+12/01/2023 13:05:15 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:15 +02:00
+12/01/2023 13:05:20 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:20 +02:00
+12/01/2023 13:05:25 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:25 +02:00
+12/01/2023 13:05:30 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:30 +02:00
+12/01/2023 13:05:35 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:35 +02:00
+12/01/2023 13:05:40 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:40 +02:00
+12/01/2023 13:05:45 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:45 +02:00
+12/01/2023 13:05:47 +02:00 [Information] - Message: path: .txt
+12/01/2023 13:05:55 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:05:55 +02:00
+12/01/2023 13:05:55 +02:00 [Information] - Message: The process cannot access the file 'C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE\Data\NewData\SOEM1_TN_RFInputPower_20210121_051500.txt' because it is being used by another process.
+12/01/2023 13:06:00 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:00 +02:00
+12/01/2023 13:06:05 +02:00 [Information] - Message: Connection Established.
+12/01/2023 13:06:05 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:05 +02:00
+12/01/2023 13:06:05 +02:00 [Information] - Message: Now listening on: "https://localhost:7035"
+12/01/2023 13:06:05 +02:00 [Information] - Message: Now listening on: "http://localhost:5176"
+12/01/2023 13:06:05 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 13:06:05 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 13:06:05 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\NI-BE\NI-BE"
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 175.1104ms
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_framework/aspnetcore-browser-refresh.js - - - 200 12342 application/javascript;+charset=utf-8 16.6452ms
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.9949ms
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+12/01/2023 13:06:06 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 57.8314ms
+12/01/2023 13:06:10 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:10 +02:00
+12/01/2023 13:06:15 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:15 +02:00
+12/01/2023 13:06:17 +02:00 [Information] - Message: path: .txt
+12/01/2023 13:06:20 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:20 +02:00
+12/01/2023 13:06:25 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:25 +02:00
+12/01/2023 13:06:25 +02:00 [Information] - Message: HTTP request exception: No connection could be made because the target machine actively refused it. (localhost:7196)
+12/01/2023 13:06:25 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt File moved successfully to organizer folder
+12/01/2023 13:06:25 +02:00 [Information] - Message: SOEM1_TN_RFInputPower_20210121_051500.txt Created
+12/01/2023 13:06:30 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:30 +02:00
+12/01/2023 13:06:35 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:35 +02:00
+12/01/2023 13:06:40 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:40 +02:00
+12/01/2023 13:06:45 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:45 +02:00
+12/01/2023 13:06:50 +02:00 [Information] - Message: Worker running at time: 12/01/2023 13:06:50 +02:00

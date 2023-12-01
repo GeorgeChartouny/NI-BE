@@ -29,6 +29,7 @@
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
         "oldDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\OldData",
         "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "unloadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
         "appUrl": "http://localhost:5176",
@@ -54,6 +55,7 @@
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
         "oldDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\OldData",
         "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "unloadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_",
         "appUrl": "https://localhost:7035",
@@ -81,6 +83,7 @@
         "loadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\LoadedParsedData",
         "oldDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\OldData",
         "newDataFolder": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\NewData",
+        "unloadedData": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\",
         "rejectedPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\rejected_",
         "exceptionPath": "C:\\Users\\User\\Desktop\\G\\Baby NI Project\\Code\\NI-BE\\NI-BE\\NI-BE\\Data\\UnloadedData\\exceptions_"
 

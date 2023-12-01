@@ -1,0 +1,53 @@
+12/01/2023 12:27:35 +02:00 [Information] - Message: Now listening on: "https://localhost:7211"
+12/01/2023 12:27:35 +02:00 [Information] - Message: Now listening on: "http://localhost:5058"
+12/01/2023 12:27:35 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 12:27:35 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 12:27:35 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\babyNI-AggregatorAPI\babyNI-AggregatorAPI"
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 530.1700ms
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 43.1715ms
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.6073ms
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+12/01/2023 12:27:37 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.1014ms
+12/01/2023 12:27:58 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7211/api/Aggregation/aggregate-file multipart/form-data;+boundary="e6c3775d-bb44-434d-ba5e-886993702ad9" 230269
+12/01/2023 12:27:59 +02:00 [Information] - Message: Executing endpoint '"babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)"'
+12/01/2023 12:27:59 +02:00 [Information] - Message: Route matched with "{action = \"AggregateControllerPost\", controller = \"Aggregation\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AggregateControllerPost(babyNI_AggregatorAPI.Models.FileUpload)" on controller "babyNI_AggregatorAPI.Controllers.AggregationController" ("babyNI-AggregatorAPI").
+12/01/2023 12:28:00 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Hourly table created.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Data inserted into hourly table successfully.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Data inserted into daily table successfully.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Data aggregated and loaded to the database.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+12/01/2023 12:28:00 +02:00 [Information] - Message: Executed action "babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)" in 1789.859ms
+12/01/2023 12:28:00 +02:00 [Information] - Message: Executed endpoint '"babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)"'
+12/01/2023 12:28:00 +02:00 [Information] - Message: HTTP "POST" "/api/Aggregation/aggregate-file" responded 200 in 1908.0888 ms
+12/01/2023 12:28:00 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7211/api/Aggregation/aggregate-file multipart/form-data;+boundary="e6c3775d-bb44-434d-ba5e-886993702ad9" 230269 - 200 - text/plain;+charset=utf-8 1932.6633ms
+12/01/2023 12:28:51 +02:00 [Information] - Message: Request starting HTTP/1.1 POST https://localhost:7211/api/Aggregation/aggregate-file multipart/form-data;+boundary="d4c89d51-2e0d-4bc1-9919-39509974bd87" 926874
+12/01/2023 12:28:51 +02:00 [Information] - Message: Executing endpoint '"babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)"'
+12/01/2023 12:28:51 +02:00 [Information] - Message: Route matched with "{action = \"AggregateControllerPost\", controller = \"Aggregation\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AggregateControllerPost(babyNI_AggregatorAPI.Models.FileUpload)" on controller "babyNI_AggregatorAPI.Controllers.AggregationController" ("babyNI-AggregatorAPI").
+12/01/2023 12:28:51 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:51 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:51 +02:00 [Information] - Message: Hourly table created.
+12/01/2023 12:28:51 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Data inserted into hourly table successfully.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Connection Established.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Query Executed Successfully.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Data inserted into daily table successfully.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Data aggregated and loaded to the database.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"System.String"'.
+12/01/2023 12:28:52 +02:00 [Information] - Message: Executed action "babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)" in 879.3476ms
+12/01/2023 12:28:52 +02:00 [Information] - Message: Executed endpoint '"babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)"'
+12/01/2023 12:28:52 +02:00 [Information] - Message: HTTP "POST" "/api/Aggregation/aggregate-file" responded 200 in 895.6755 ms
+12/01/2023 12:28:52 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7211/api/Aggregation/aggregate-file multipart/form-data;+boundary="d4c89d51-2e0d-4bc1-9919-39509974bd87" 926874 - 200 - text/plain;+charset=utf-8 902.1192ms

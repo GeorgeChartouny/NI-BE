@@ -51,3 +51,16 @@
 12/01/2023 12:28:52 +02:00 [Information] - Message: Executed endpoint '"babyNI_AggregatorAPI.Controllers.AggregationController.AggregateControllerPost (babyNI-AggregatorAPI)"'
 12/01/2023 12:28:52 +02:00 [Information] - Message: HTTP "POST" "/api/Aggregation/aggregate-file" responded 200 in 895.6755 ms
 12/01/2023 12:28:52 +02:00 [Information] - Message: Request finished HTTP/1.1 POST https://localhost:7211/api/Aggregation/aggregate-file multipart/form-data;+boundary="d4c89d51-2e0d-4bc1-9919-39509974bd87" 926874 - 200 - text/plain;+charset=utf-8 902.1192ms
+12/01/2023 15:17:12 +02:00 [Information] - Message: Now listening on: "https://localhost:7211"
+12/01/2023 15:17:12 +02:00 [Information] - Message: Now listening on: "http://localhost:5058"
+12/01/2023 15:17:12 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 15:17:12 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 15:17:12 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\babyNI-AggregatorAPI\babyNI-AggregatorAPI"
+12/01/2023 15:17:14 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 916.9800ms
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 51.5805ms
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 152.8492ms
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+12/01/2023 15:17:15 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 318.8556ms

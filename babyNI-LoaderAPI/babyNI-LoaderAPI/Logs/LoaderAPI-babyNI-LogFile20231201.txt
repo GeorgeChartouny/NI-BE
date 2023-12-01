@@ -105,3 +105,16 @@
 12/01/2023 13:35:46 +02:00 [Information] - Message: Request finished HTTP/2 POST https://localhost:7196/api/Loader/load-file multipart/form-data;+boundary=----WebKitFormBoundaryDnNLT8YcLOPKvZKd 230215 - 200 - text/plain;+charset=utf-8 366.0379ms
 12/01/2023 13:35:50 +02:00 [Information] - Message: Could not call the aggregated api : No connection could be made because the target machine actively refused it. (localhost:7211)
 12/01/2023 13:35:54 +02:00 [Information] - Message: Application is shutting down...
+12/01/2023 15:16:24 +02:00 [Information] - Message: Now listening on: "https://localhost:7196"
+12/01/2023 15:16:24 +02:00 [Information] - Message: Now listening on: "http://localhost:5291"
+12/01/2023 15:16:24 +02:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+12/01/2023 15:16:24 +02:00 [Information] - Message: Hosting environment: "Development"
+12/01/2023 15:16:24 +02:00 [Information] - Message: Content root path: "C:\Users\User\Desktop\G\Baby NI Project\Code\NI-BE\babyNI-LoaderAPI\babyNI-LoaderAPI"
+12/01/2023 15:16:25 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/swagger/index.html - -
+12/01/2023 15:16:26 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/_framework/aspnetcore-browser-refresh.js - -
+12/01/2023 15:16:26 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/_vs/browserLink - -
+12/01/2023 15:16:26 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 36.8422ms
+12/01/2023 15:16:26 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/swagger/index.html - - - 200 - text/html;charset=utf-8 1416.3810ms
+12/01/2023 15:16:26 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 161.3244ms
+12/01/2023 15:16:27 +02:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:7196/swagger/v1/swagger.json - -
+12/01/2023 15:16:27 +02:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:7196/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 317.0183ms
